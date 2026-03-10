@@ -404,7 +404,7 @@
     <!-- Bootstrap + Theme scripts -->
     <script src="../assets/js/theme.min.js"></script>
 
-    <!-- Bootstrap form validation -->
+    <!-- Contact form submission -->
     <script>
       (function () {
         var forms = document.querySelectorAll('.needs-validation')
@@ -413,8 +413,38 @@
             event.preventDefault()
             event.stopPropagation()
             if (form.checkValidity()) {
-              // Form is valid — show success message
-              form.innerHTML = '<div class="text-center py-5"><i class="ai-circle-check display-3 text-primary mb-3"></i><h3>Vielen Dank!</h3><p class="fs-lg text-body-secondary">Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns schnellstmöglich bei Ihnen melden.</p></div>'
+              var submitBtn = form.querySelector('button[type="submit"]')
+              submitBtn.disabled = true
+              submitBtn.textContent = 'Wird gesendet…'
+
+              var data = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                organisation: document.getElementById('contact-organisation').value,
+                subject: document.getElementById('contact-subject').value,
+                message: document.getElementById('contact-message').value,
+              }
+
+              fetch('/api/contact.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+              })
+                .then(function (res) { return res.json() })
+                .then(function (result) {
+                  if (result.success) {
+                    form.innerHTML = '<div class="text-center py-5"><i class="ai-circle-check display-3 text-primary mb-3"></i><h3>Vielen Dank!</h3><p class="fs-lg text-body-secondary">Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns schnellstmöglich bei Ihnen melden.</p></div>'
+                  } else {
+                    submitBtn.disabled = false
+                    submitBtn.textContent = 'Nachricht senden'
+                    alert('Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an eipcm@eipcm.org.')
+                  }
+                })
+                .catch(function () {
+                  submitBtn.disabled = false
+                  submitBtn.textContent = 'Nachricht senden'
+                  alert('Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an eipcm@eipcm.org.')
+                })
             }
             form.classList.add('was-validated')
           }, false)
