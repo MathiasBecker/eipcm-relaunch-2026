@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(convert:*)",
+      "Bash(magick:*)",
+      "WebFetch(domain:animate-ui.com)",
+      "Bash(gh api:*)",
+      "WebFetch(domain:gist.github.com)",
+      "Bash(brew install:*)",
+      "Bash(pdftotext:*)",
+      "Bash(ls:*)",
+      "Bash(tr:*)",
+      "Bash(done)",
+      "Bash(cwebp:*)",
+      "Bash(for f in index.html projects.html research.html contact.html training.html publications.html impressum.html privacy.html project-ai-code.html project-reflective-ai.html project-xai4covid.html project-pademos.html project-encompass.html project-ikido.html)",
+      "Bash(do sed -i '' 's|  </body>|    <script src=\"\"assets/js/cookie-consent.js\"\"></script>\\\\n  </body>|' \"$f\")",
+      "Bash(echo:*)",
+      "Bash(grep:*)",
+      "Bash(lsof:*)",
+      "Bash(wc:*)"
+    ]
+  }
+}

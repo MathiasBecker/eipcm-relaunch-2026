@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO meta tags -->
+    <title>Projekte - EIPCM</title>
+    <meta name="description" content="EIPCM Projekte — KI-Politik, partizipative Systeme und digitale Innovation in Europa.">
+    <meta name="keywords" content="EIPCM, Projekte, Reflective AI, enCOMPASS, SmartH2O, DAFNE, POWER, histoGraph, Forschungsprojekte">
+    <meta name="author" content="EIPCM">
+
+    <!-- Favicon / App icons -->
+    <link rel="icon" type="image/png" href="../assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/app-icons/icon-180x180.png">
+
+    <!-- Import Google fonts (Titillium Web for headings, Open Sans for body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="../assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <!-- Custom overrides -->
+    <style>
+      /* Body font: Open Sans, Headings: Titillium Web */
+      body { font-family: "Open Sans", sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-family: "Titillium Web", sans-serif !important;
+      }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      /* Footer text color */
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      /* Footer hover color */
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      /* Content link color */
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      /* Smaller filter buttons */
+      .masonry-filters .nav-link {
+        font-size: 0.78rem !important;
+        padding: 0.35rem 0.85rem !important;
+      }
+      /* Keep buttons/inputs unselectable */
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
+    </style>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Laden...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+
+          <!-- Navbar brand (EIPCM Logo — small on subpages) -->
+          <a class="navbar-brand pe-sm-3" href="index.html">
+            <img src="../assets/img/eipcm-logo-small.svg" alt="EIPCM" width="118" height="40">
+          </a>
+
+          <!-- LinkedIn icon -->
+          <a class="nav-link fs-xl order-lg-2 ms-lg-4 p-2 d-none d-lg-inline-flex" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ai-linkedin"></i>
+          </a>
+
+          <!-- Contact button (separate from main nav) -->
+          <a class="btn btn-secondary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex ms-auto ms-lg-3" href="kontakt.html">
+            Kontakt
+          </a>
+
+          <!-- Language switcher -->
+          <span class="order-lg-4 d-none d-sm-inline-flex align-items-center ms-3 fs-sm">
+            <a href="../projects.html" class="text-decoration-none text-muted">EN</a>
+            <span class="mx-1 text-muted">|</span>
+            <strong class="text-nav">DE</strong>
+          </span>
+
+          <!-- Mobile menu toggler (Hamburger) -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse (Main navigation) -->
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item">
+                <a class="nav-link active" href="projekte.html">Projekte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="forschung.html">Forschung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="publikationen.html">Publikationen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="training.html">Training</a>
+              </li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-secondary w-100 mb-1" href="kontakt.html">Kontakt</a>
+            </div>
+            <div class="d-sm-none text-center pb-3">
+              <a href="../projects.html" class="text-decoration-none text-muted">EN</a>
+              <span class="mx-2 text-muted">|</span>
+              <strong class="text-nav">DE</strong>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page content -->
+      <section class="container pt-5 mt-5 mb-2 mb-md-3 mb-lg-4 mb-xxl-5">
+
+        <h1 class="display-4 pb-2 pb-lg-3">Projekte</h1>
+
+        <div class="masonry-filterable">
+
+          <!-- Filters -->
+          <ul class="masonry-filters nav nav-pills fs-sm flex-nowrap overflow-auto text-nowrap w-100 pb-4 mb-2 mb-sm-3" style="max-width: 590px;">
+            <li class="nav-item mb-0">
+              <a class="nav-link border active" href="#" data-group="all">Alle</a>
+            </li>
+            <li class="nav-item mb-0">
+              <a class="nav-link border" href="#" data-group="ai">KI &amp; Gesellschaft</a>
+            </li>
+            <li class="nav-item mb-0">
+              <a class="nav-link border" href="#" data-group="sustainability">Nachhaltigkeit</a>
+            </li>
+            <li class="nav-item mb-0">
+              <a class="nav-link border" href="#" data-group="innovation">Soziale Innovation</a>
+            </li>
+          </ul>
+
+          <!-- Grid of portfolio items -->
+          <div class="masonry-grid" data-columns="2">
+
+            <!-- AI-CODE -->
+            <article class="masonry-grid-item pb-lg-5 mb-3 mb-lg-0 mb-xl-2" data-groups='["ai"]'>
+              <div class="card-hover zoom-effect mx-auto" style="max-width: 620px;">
+                <div class="zoom-effect-wrapper rounded-5 bg-secondary">
+                  <div class="zoom-effect-img">
+                    <picture>
+                      <source srcset="../assets/img/eipcm/ai-code.webp" type="image/webp">
+                      <img src="../assets/img/eipcm/ai-code.png" alt="AI-CODE" class="d-block w-100">
+                    </picture>
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h5 mb-2">
+                    <a class="stretched-link text-nav" href="projekt-ai-code.html">AI-CODE</a>
+                  </h2>
+                  <span class="fs-sm text-body-secondary">KI &amp; Gesellschaft</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- iKIDO -->
+            <article class="masonry-grid-item pb-lg-5 mb-3 mb-lg-0 mb-xl-2" data-groups='["ai"]'>
+              <div class="card-hover zoom-effect mx-auto" style="max-width: 620px;">
+                <div class="zoom-effect-wrapper rounded-5 bg-secondary">
+                  <div class="zoom-effect-img">
+                    <picture>
+                      <source srcset="../assets/img/eipcm/ikido.webp" type="image/webp">
+                      <img src="../assets/img/eipcm/ikido.png" alt="iKIDO" class="d-block w-100">
+                    </picture>
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h5 mb-2">
+                    <a class="stretched-link text-nav" href="projekt-ikido.html">iKIDO</a>
+                  </h2>
+                  <span class="fs-sm text-body-secondary">KI &amp; Bildung</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Reflective AI -->
+            <article class="masonry-grid-item pb-lg-5 mb-3 mb-lg-0 mb-xl-2" data-groups='["ai"]'>
+              <div class="card-hover zoom-effect mx-auto" style="max-width: 620px;">
+                <div class="zoom-effect-wrapper rounded-5 bg-secondary">
+                  <div class="zoom-effect-img">
+                    <picture>
+                      <source srcset="../assets/img/eipcm/Reflective-ai.webp" type="image/webp">
+                      <img src="../assets/img/eipcm/Reflective-ai.png" alt="Reflective AI" class="d-block w-100">
+                    </picture>
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h5 mb-2">
+                    <a class="stretched-link text-nav" href="projekt-reflective-ai.html">Reflective AI</a>
+                  </h2>
+                  <span class="fs-sm text-body-secondary">KI &amp; Gesellschaft, Menschenzentrierte KI</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- XAI4Covid -->
+            <article class="masonry-grid-item pb-lg-5 mb-3 mb-lg-0 mb-xl-2" data-groups='["ai"]'>
+              <div class="card-hover zoom-effect mx-auto" style="max-width: 620px;">
+                <div class="zoom-effect-wrapper rounded-5 bg-secondary">
+                  <div class="zoom-effect-img">
+                    <picture>
+                      <source srcset="../assets/img/eipcm/XAI4Covid.webp" type="image/webp">
+                      <img src="../assets/img/eipcm/XAI4Covid.png" alt="XAI4Covid" class="d-block w-100">
+                    </picture>
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h5 mb-2">
+                    <a class="stretched-link text-nav" href="projekt-xai4covid.html">XAI4Covid</a>
+                  </h2>
+                  <span class="fs-sm text-body-secondary">KI &amp; Gesellschaft, Erkl&auml;rbare KI</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- PADEMOS -->
+            <article class="masonry-grid-item pb-lg-5 mb-3 mb-lg-0 mb-xl-2" data-groups='["ai", "innovation"]'>
+              <div class="card-hover zoom-effect mx-auto" style="max-width: 620px;">
+                <div class="zoom-effect-wrapper rounded-5 bg-secondary">
+                  <div class="zoom-effect-img">
+                    <picture>
+                      <source srcset="../assets/img/eipcm/pademos.webp" type="image/webp">
+                      <img src="../assets/img/eipcm/pademos.png" alt="PADEMOS" class="d-block w-100">
+                    </picture>
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h5 mb-2">
+                    <a class="stretched-link text-nav" href="projekt-pademos.html">PADEMOS</a>
+                  </h2>
+                  <span class="fs-sm text-body-secondary">eDemokratie, Partizipation</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- enCOMPASS -->
+            <article class="masonry-grid-item pb-lg-5 mb-3 mb-lg-0 mb-xl-2" data-groups='["sustainability"]'>
+              <div class="card-hover zoom-effect mx-auto" style="max-width: 620px;">
+                <div class="zoom-effect-wrapper rounded-5 bg-secondary">
+                  <div class="zoom-effect-img">
+                    <picture>
+                      <source srcset="../assets/img/eipcm/encompass.webp" type="image/webp">
+                      <img src="../assets/img/eipcm/encompass.png" alt="enCOMPASS" class="d-block w-100">
+                    </picture>
+                  </div>
+                </div>
+                <div class="pt-4 mt-lg-2">
+                  <h2 class="h5 mb-2">
+                    <a class="stretched-link text-nav" href="projekt-encompass.html">enCOMPASS</a>
+                  </h2>
+                  <span class="fs-sm text-body-secondary">Nachhaltigkeit, Energieeinsparung</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="../assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Germany</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projekte.html">Projekte</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="forschung.html">Forschung</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publikationen.html">Publikationen</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Rechtliches</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Kontakt</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:info@eipcm.org">info@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="kontakt.html">Kontakt aufnehmen</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="../assets/js/theme.min.js"></script>
+    <script src="../assets/js/cookie-consent.js"></script>
+  </body>
+</html>

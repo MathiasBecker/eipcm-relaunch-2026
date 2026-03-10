@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO meta tags -->
+    <title>Forschung - EIPCM</title>
+    <meta name="description" content="EIPCM Forschung — Entwicklung neuartiger partizipativer Systeme und Anwendungen von IKT für eine bessere Gesellschaft.">
+    <meta name="keywords" content="EIPCM, Forschung, partizipative Systeme, KI, IKT, Wissensvisualisierung, menschenzentrierte KI">
+    <meta name="author" content="EIPCM">
+
+    <!-- Favicon / App icons -->
+    <link rel="icon" type="image/png" href="../assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/app-icons/icon-180x180.png">
+
+    <!-- Import Google fonts (Titillium Web for headings, Open Sans for body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="../assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <!-- Custom overrides -->
+    <style>
+      /* Body font: Open Sans, Headings: Titillium Web */
+      body { font-family: "Open Sans", sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-family: "Titillium Web", sans-serif !important;
+      }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      /* Footer text color */
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      /* Footer hover color */
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      /* Content link color */
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      /* Keep buttons/inputs unselectable */
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
+    </style>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Laden...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+
+          <!-- Navbar brand (EIPCM Logo — small on subpages) -->
+          <a class="navbar-brand pe-sm-3" href="index.html">
+            <img src="../assets/img/eipcm-logo-small.svg" alt="EIPCM" width="118" height="40">
+          </a>
+
+          <!-- LinkedIn icon -->
+          <a class="nav-link fs-xl order-lg-2 ms-lg-4 p-2 d-none d-lg-inline-flex" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ai-linkedin"></i>
+          </a>
+
+          <!-- Contact button (separate from main nav) -->
+          <a class="btn btn-secondary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex ms-auto ms-lg-3" href="kontakt.html">
+            Kontakt
+          </a>
+
+          <!-- Language switcher -->
+          <span class="order-lg-4 d-none d-sm-inline-flex align-items-center ms-3 fs-sm">
+            <a href="../research.html" class="text-decoration-none text-muted">EN</a>
+            <span class="mx-1 text-muted">|</span>
+            <strong class="text-nav">DE</strong>
+          </span>
+
+          <!-- Mobile menu toggler (Hamburger) -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Navigation umschalten">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse (Main navigation) -->
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item">
+                <a class="nav-link" href="projekte.html">Projekte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="forschung.html">Forschung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="publikationen.html">Publikationen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="training.html">Training</a>
+              </li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-secondary w-100 mb-1" href="kontakt.html">Kontakt</a>
+            </div>
+            <div class="d-sm-none text-center pb-3">
+              <a href="../research.html" class="text-decoration-none text-muted">EN</a>
+              <span class="mx-2 text-muted">|</span>
+              <strong class="text-nav">DE</strong>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page header -->
+      <section class="container py-5 mt-5" style="margin-bottom: -30px;">
+
+        <div class="row">
+          <!-- Page title -->
+          <div class="col-lg-8 pb-2 pb-lg-0 mb-4 mb-lg-0">
+            <h1 class="display-4 pb-2 pb-lg-3">Forschung am EIPCM</h1>
+            <p class="fs-lg text-body-secondary mb-0">Entwicklung neuartiger partizipativer Systeme &amp; Anwendungen von IKT für eine bessere Gesellschaft</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Cover image -->
+      <section class="container" style="margin-bottom: -30px;">
+        <div class="rounded-5 overflow-hidden bg-secondary">
+          <picture>
+            <source srcset="../assets/img/eipcm/Research.webp" type="image/webp">
+            <img src="../assets/img/eipcm/Research.png" alt="EIPCM Forschung" class="d-block w-100">
+          </picture>
+        </div>
+      </section>
+
+
+      <!-- Post content -->
+      <section class="container py-5 my-md-2 my-lg-3 my-xl-4">
+        <div class="row pt-xxl-2">
+          <div class="col-lg-9 col-xl-8 pe-lg-4 pe-xl-0">
+
+            <!-- Intro -->
+            <p class="fs-lg">Das European Institute for Participatory Media (EIPCM) ist eine gemeinnützige Forschungsorganisation, die sich der Weiterentwicklung partizipativer Formen der Informations- und Medienerstellung widmet. Wir unterstützen Unternehmen, öffentliche Institutionen und die Zivilgesellschaft dabei, das transformative Potenzial digitaler Partizipation zu nutzen — als Innovationsvermittler, der strenge wissenschaftliche Forschung mit den praktischen Bedürfnissen von Industrie und Nutzergemeinschaften verbindet.</p>
+            <p class="fs-lg mb-3">Unsere Forschung basiert auf drei grundlegenden Prinzipien: transdisziplinäre Zusammenarbeit, nutzerzentriertes Design und praxisorientierte Forschung.</p>
+
+            <!-- Unser Forschungsansatz -->
+            <h2 class="h4 mb-lg-4 pt-3 pt-md-4 pt-xl-5" id="approach" style="scroll-margin-top: 6rem;">Unser Forschungsansatz</h2>
+            <p class="fs-lg pb-4 pb-xl-5">Zeitgenössische Herausforderungen lassen sich selten innerhalb der Grenzen einer einzelnen Disziplin bewältigen. Das EIPCM begegnet dieser Realität, indem es seine Arbeit um übergreifende Forschungsthemen organisiert, in denen komplementäre Anwendungsfelder zusammenwirken, um komplexe gesellschaftliche Probleme zu lösen. Durch systematische empirische Erprobung in realen Umgebungen arbeiten wir daran, die wachsende Kluft zwischen akademischer Wissensproduktion und umsetzbaren praktischen Ergebnissen zu schließen.</p>
+
+            <!-- Zentrale Forschungsthemen -->
+            <h2 class="h4 mb-lg-4 pt-3 pt-md-4 pt-xl-5" id="themes" style="scroll-margin-top: 6rem;">Zentrale Forschungsthemen</h2>
+
+            <!-- 1. Partizipative Systeme -->
+            <h3 class="h5 pt-2">1. Partizipative Systeme</h3>
+            <p class="fs-lg mb-4">Wir untersuchen, wie die vernetzte Ko-Kreation und das kollaborative Management von Wissen, Produkten und Dienstleistungen in „Wertschöpfungsnetzwerken" effektiv organisiert werden kann — indem Endnutzer mit Fachleuten verbunden werden. Unsere Arbeit untersucht die Synergien zwischen partizipativen Plattformen und Mediensystemen der nächsten Generation, um einen nahtlosen, geräteunabhängigen Informationszugang zu ermöglichen.</p>
+
+            <!-- 2. Wissensvisualisierung -->
+            <h3 class="h5 pt-2">2. Wissensvisualisierung</h3>
+            <p class="fs-lg mb-4">Eine sinnvolle Zusammenarbeit zwischen Akteuren mit unterschiedlichen Zielen und Perspektiven zu ermöglichen, ist eine zentrale Herausforderung für moderne Institutionen. Wir entwickeln technologische Rahmenwerke für die semantische Strukturierung und Visualisierung von Wissens- und Kommunikationsflüssen — um verschiedene Standpunkte für alle Beteiligten lesbar, handlungsfähig und produktiv zu machen.</p>
+
+            <!-- 3. Menschenzentrierte & vertrauenswürdige KI -->
+            <h3 class="h5 pt-2">3. Menschenzentrierte &amp; vertrauenswürdige KI</h3>
+            <p class="fs-lg">Ein zentraler Schwerpunkt unserer aktuellen Forschungsagenda ist die Entwicklung von Reflective AI. Wir sind überzeugt, dass die Nutzung der Vorteile von KI bei gleichzeitiger Minimierung ihrer Risiken nicht allein durch regulatorische Rahmenbedingungen erreicht werden kann — es erfordert, Menschen mit den konzeptionellen Werkzeugen auszustatten, um die Folgen von KI-Design zu verstehen und kritisch zu bewerten.</p>
+            <ul class="fs-lg mb-4">
+              <li class="mb-2"><strong>Mensch-KI-Interaktion &amp; UX:</strong> Gestaltung intuitiver, zugänglicher Schnittstellen, die eine selbstbewusste und informierte Zusammenarbeit zwischen Mensch und KI ermöglichen.</li>
+              <li class="mb-2"><strong>Desinformation &amp; Medienkompetenz:</strong> Bekämpfung von Online-Desinformation durch Förderung kritischen Denkens und Vertiefung des öffentlichen Verständnisses für die Rolle der KI in der Gestaltung zeitgenössischer Informationsökosysteme.</li>
+            </ul>
+
+            <!-- Wichtige Anwendungsfelder -->
+            <h2 class="h4 mb-lg-4 pt-3 pt-md-4 pt-xl-5" id="applications" style="scroll-margin-top: 6rem;">Wichtige Anwendungsfelder</h2>
+            <p class="fs-lg mb-3">Unsere Forschungsthemen werden in mehreren Bereichen operationalisiert, um soziale Innovation voranzutreiben:</p>
+            <ul class="fs-lg mb-4">
+              <li class="mb-2"><strong>Social Computing:</strong> Entwurf und Erprobung von Ansätzen kollektiver Intelligenz in realen Umgebungen — einschließlich Crowdsourcing und Human Computation — die menschliches Urteilsvermögen produktiv mit maschinellen Fähigkeiten verbinden.</li>
+              <li class="mb-2"><strong>eDemokratie:</strong> Erforschung neuer Modelle für Bürgerbeteiligung und politische Bildung, die den horizontalen Dialog zwischen staatlichen Institutionen und der organisierten Zivilgesellschaft fördern.</li>
+              <li class="mb-2"><strong>Soziale Innovation:</strong> Analyse, wie digitale Technologien neue Formen sozialer, kultureller und wirtschaftlicher Interaktion hervorbringen — von Sozialunternehmen bis hin zu Open-Source-Ökosystemen.</li>
+              <li class="mb-2"><strong>Offene Innovation:</strong> Forschung zu kooperativen Geschäftsmodellen, in denen Endnutzer als aktive Mitgestalter von Wertschöpfung in professionellen Netzwerken befähigt werden.</li>
+              <li class="mb-2"><strong>Digital Humanities:</strong> Anwendung digitaler Methoden und semantischer Analyse in der geisteswissenschaftlichen Forschung, die neuartige Muster der historischen Wissensentdeckung ermöglicht.</li>
+              <li class="mb-2"><strong>Nachhaltigkeit &amp; Wissenschaftskommunikation:</strong> Förderung nachhaltiger Praktiken und evidenzbasierter öffentlicher Kommunikation zur Bewältigung globaler Herausforderungen und der breiteren gesellschaftlichen Auswirkungen von KI.</li>
+            </ul>
+
+            <!-- Forschungsprojekte & Publikationen -->
+            <h2 class="h4 mb-lg-4 pt-3 pt-md-4 pt-xl-5" id="publications" style="scroll-margin-top: 6rem;">Forschungsprojekte &amp; Publikationen</h2>
+            <p class="fs-lg">Unsere wissenschaftlichen Beiträge sind durch ein umfangreiches Portfolio an Projekten und begutachteten Publikationen dokumentiert.</p>
+            <ul class="fs-lg">
+              <li class="mb-2"><strong>Ausgewählte Projekte:</strong> Reflective AI, SmartH2O (Wassernachhaltigkeit), enCOMPASS (Energieeinsparung) und histoGraph (historische soziale Netzwerkanalyse).</li>
+              <li class="mb-2"><strong>Publikationen:</strong> EIPCM-Forschende publizieren regelmäßig in führenden begutachteten Fachzeitschriften — darunter Sustainability und Energy Informatics — und tragen zu internationalen Spitzenkonferenzen wie CHI, ECIS und HICSS bei.</li>
+            </ul>
+
+          </div>
+
+
+          <!-- Sidebar -->
+          <aside class="col-lg-3 offset-xl-1 pt-4 pt-lg-0" style="margin-top: -7rem;">
+            <div class="position-sticky top-0 mt-2 mt-md-3 mt-lg-0" style="padding-top: 7rem;">
+
+              <!-- Quick links -->
+              <h4 class="mb-4">Auf dieser Seite:</h4>
+              <ul class="list-unstyled mb-0">
+                <li class="border-bottom pb-3 mb-3">
+                  <span class="h6 mb-0">
+                    <a href="#approach">Unser Forschungsansatz</a>
+                  </span>
+                </li>
+                <li class="border-bottom pb-3 mb-3">
+                  <span class="h6 mb-0">
+                    <a href="#themes">Zentrale Forschungsthemen</a>
+                  </span>
+                </li>
+                <li class="border-bottom pb-3 mb-3">
+                  <span class="h6 mb-0">
+                    <a href="#applications">Wichtige Anwendungsfelder</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="h6 mb-0">
+                    <a href="#publications">Projekte &amp; Publikationen</a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="../assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Deutschland</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projekte.html">Projekte</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="forschung.html">Forschung</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publikationen.html">Publikationen</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Rechtliches</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Kontakt</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:info@eipcm.org">info@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="kontakt.html">Kontakt aufnehmen</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Zurück nach oben">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="../assets/js/theme.min.js"></script>
+    <script src="../assets/js/cookie-consent.js"></script>
+  </body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light" style="font-size: 15px;">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO meta tags -->
+    <title>iKIDO - EIPCM</title>
+    <meta name="description" content="iKIDO — Interaktive KI-Erlebnisräume für eine digital souveräne Jugend. KI-Kompetenz durch erfahrungsbasiertes Lernen und Gamification fördern.">
+    <meta name="keywords" content="EIPCM, iKIDO, KI-Kompetenz, digitale Souveränität, Jugend, Gamification, KI-Bildung, erfahrungsbasiertes Lernen">
+    <meta name="author" content="EIPCM">
+
+    <!-- Favicon / App icons -->
+    <link rel="icon" type="image/png" href="../assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/app-icons/icon-180x180.png">
+
+    <!-- Import Google fonts (Titillium Web for headings, Open Sans for body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/aos/dist/aos.css">
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="../assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <!-- Custom overrides -->
+    <style>
+      /* Body font: Open Sans, Headings: Titillium Web */
+      body { font-family: "Open Sans", sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-family: "Titillium Web", sans-serif !important;
+      }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      /* Footer text color */
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      /* Footer hover color */
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      /* Content link color */
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      /* Keep buttons/inputs unselectable */
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
+    </style>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Laden...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+
+          <!-- Navbar brand (EIPCM Logo — small on subpages) -->
+          <a class="navbar-brand pe-sm-3" href="index.html">
+            <img src="../assets/img/eipcm-logo-small.svg" alt="EIPCM" width="118" height="40">
+          </a>
+
+          <!-- LinkedIn icon -->
+          <a class="nav-link fs-xl order-lg-2 ms-lg-4 p-2 d-none d-lg-inline-flex" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ai-linkedin"></i>
+          </a>
+
+          <!-- Contact button (separate from main nav) -->
+          <a class="btn btn-secondary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex ms-auto ms-lg-3" href="kontakt.html">
+            Kontakt
+          </a>
+
+          <!-- Language switcher -->
+          <span class="order-lg-4 d-none d-sm-inline-flex align-items-center ms-3 fs-sm">
+            <a href="../project-ikido.html" class="text-decoration-none text-muted">EN</a>
+            <span class="mx-1 text-muted">|</span>
+            <strong class="text-nav">DE</strong>
+          </span>
+
+          <!-- Mobile menu toggler (Hamburger) -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse (Main navigation) -->
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item">
+                <a class="nav-link" href="projekte.html">Projekte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="forschung.html">Forschung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="publikationen.html">Publikationen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="training.html">Training</a>
+              </li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-secondary w-100 mb-1" href="kontakt.html">Kontakt</a>
+            </div>
+            <div class="d-sm-none text-center pb-3">
+              <a href="../project-ikido.html" class="text-decoration-none text-muted">EN</a>
+              <span class="mx-2 text-muted">|</span>
+              <strong class="text-nav">DE</strong>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="position-relative pt-5 mb-5">
+        <div class="bg-secondary position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block"></div>
+        <div class="bg-secondary position-absolute top-0 end-0 w-100 h-100 d-lg-none"></div>
+        <div class="container position-relative z-2 py-5 pb-lg-0">
+
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="pt-lg-2 pb-1 breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Startseite</a></li>
+              <li class="breadcrumb-item"><a href="projekte.html">Projekte</a></li>
+              <li class="breadcrumb-item active" aria-current="page">iKIDO</li>
+            </ol>
+          </nav>
+
+          <div class="d-lg-flex align-items-center pt-3 pb-xxl-5">
+            <!-- Hero image placeholder -->
+            <div class="order-lg-2 me-auto me-lg-0 ms-auto d-flex align-items-center justify-content-center rounded-5 bg-white" style="width: 480px; max-width: 100%; min-height: 360px;">
+              <i class="ai-image display-1 text-body-secondary opacity-50"></i>
+            </div>
+            <div class="order-lg-1 text-center text-lg-start pe-lg-4 py-4 py-md-5">
+              <h1 class="display-3 pb-3 pb-lg-4">iKIDO &mdash; Jugend stärken durch interaktive KI-Erlebnisräume</h1>
+              <p class="fs-lg mx-auto mx-lg-0 mb-0" style="max-width: 530px;">Förderung von KI-Kompetenz und digitaler Souveränität durch erfahrungsbasiertes Lernen und Gamification für Jugendliche und Pädagog:innen in non-formalen Lernumgebungen.</p>
+            </div>
+          </div>
+
+          <!-- Project links -->
+          <ul class="nav justify-content-center justify-content-lg-start mx-n2 pt-lg-5 mb-0">
+            <li class="nav-item me-3">
+              <span class="nav-link p-2 text-body-secondary">Gefördert von BMFSFJ</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link p-2 text-body-secondary">2023 &ndash; 2025</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- Project showcase -->
+      <section class="container pt-lg-2 pt-xl-4 pt-xxl-5">
+        <div class="row py-sm-3 py-md-4 py-lg-5">
+
+          <!-- Sticky sidebar with brief -->
+          <aside class="col-md-3 col-lg-2" style="margin-top: -125px;">
+            <div class="d-flex d-md-block flex-wrap position-sticky top-0" style="padding-top: 130px;">
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Partner</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">HS Stralsund</li>
+                  <li class="d-block py-1">EIPCM</li>
+                  <li class="d-block py-1">meredo e.V.</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Bereich</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">KI &amp; Bildung</li>
+                  <li class="d-block py-1">Digitale Souveränität</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">EIPCM-Rolle</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Partizipatives Design</li>
+                  <li class="d-block py-1">Gamification</li>
+                  <li class="d-block py-1">Technische Umsetzung</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Laufzeit</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">2023 &ndash; 2025</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Description -->
+          <div class="col-md-9 offset-lg-1">
+            <div class="ps-md-4 ps-lg-0">
+
+              <!-- Überblick -->
+              <div class="border-bottom pb-3 pb-sm-4 pb-lg-5 mb-4">
+                <p class="text-dark lead mb-md-2 mb-lg-3 mb-xl-4">Das Projekt iKIDO entwickelt innovative Lösungen, damit junge Menschen KI-Kompetenzen erwerben können. Anstatt auf rein theoretisches Wissen zu setzen, nutzt das Projekt interaktive &bdquo;KI-Erlebnisräume&ldquo;, in denen Teilnehmende KI-Methoden anhand realistischer Anwendungsbeispiele praktisch erkunden können.</p>
+              </div>
+
+              <!-- Problem & Kontext -->
+              <h2 class="h1 pt-2 pt-sm-3 pt-md-4 pt-lg-5 pb-2">Problem &amp; Kontext</h2>
+              <p class="fs-lg">KI-Systeme sind zunehmend in den Alltag integriert, doch es besteht eine erhebliche Bildungslücke:</p>
+              <ul class="fs-lg mb-4">
+                <li class="mb-2"><strong>Unreflektierte Nutzung:</strong> Jugendliche nutzen häufig KI-generierte Inhalte oder Tools, ohne die zugrundeliegenden Mechanismen zu verstehen.</li>
+                <li class="mb-2"><strong>Mangelnde Zugänglichkeit:</strong> Viele bestehende Bildungsangebote setzen technisches Vorwissen voraus, was Personen ohne technischen Hintergrund ausschließt.</li>
+                <li class="mb-2"><strong>Gesellschaftliche Risiken:</strong> Ohne KI-Kompetenz sind junge Menschen anfälliger für Manipulation durch Deepfakes und Desinformation.</li>
+              </ul>
+
+              <!-- Zielgruppe -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Zielgruppe &amp; Annahmen</h2>
+              <ul class="fs-lg mb-3">
+                <li class="mb-2"><strong>Primäre Gruppe:</strong> Jugendliche (Teenager), die aktive Nutzer:innen digitaler Medien sind.</li>
+                <li class="mb-2"><strong>Sekundäre Gruppe:</strong> Multiplikator:innen wie Lehrkräfte, Trainer:innen und Betreiber:innen von Maker Spaces.</li>
+              </ul>
+              <p class="fs-lg mb-4"><strong>Zentrale Annahmen:</strong> Komplexe Themen werden am besten durch direktes Experimentieren verstanden (Learning by Doing), und spielerische Herausforderungen und Rätsel senken die Einstiegshürde und steigern die Auseinandersetzung mit komplexer Technologie (Gamification).</p>
+
+              <!-- Ziele -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Ziele &amp; Erfolgskriterien</h2>
+              <ul class="fs-lg mb-4">
+                <li class="mb-2"><strong>Ziel 1:</strong> Stärkung der digitalen Souveränität, damit Jugendliche sich eine eigene Meinung bilden und an gesellschaftlichen Debatten über KI teilnehmen können.</li>
+                <li class="mb-2"><strong>Ziel 2:</strong> Aufbau praktischer Fähigkeiten zur Erkennung von Potenzialen und Risiken von KI.</li>
+                <li class="mb-2"><strong>Erfolgskriterien:</strong> Hohes Teilnehmendenengagement (Ziel: &gt;85% positives Feedback) und messbare selbstberichtete Kompetenzgewinne.</li>
+              </ul>
+
+              <!-- Forschung & Erkenntnisse -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Forschung &amp; Erkenntnisse</h2>
+              <ul class="fs-lg mb-4">
+                <li class="mb-2"><strong>Aha-Momente:</strong> Praktische Experimente führen zu plötzlichen Erkenntnissen, die bei den Teilnehmenden länger haften bleiben als Theorie.</li>
+                <li class="mb-2"><strong>Szenarien sind entscheidend:</strong> Greifbare Beispiele, wie autonomes Fahren für Bilderkennung, machen die Technologie alltagsnah und verständlich.</li>
+                <li class="mb-2"><strong>Multiplikator:innen-Wert:</strong> Die Schulung von Pädagog:innen (Multiplikator:innen) ist essenziell, um die nachhaltige und breite Nutzung der entwickelten Materialien sicherzustellen.</li>
+              </ul>
+
+              <!-- Hypothesen & Entscheidungen -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Hypothesen &amp; Entscheidungen</h2>
+              <ul class="fs-lg mb-4">
+                <li class="mb-2"><strong>Hypothese:</strong> Ein &bdquo;erfahrungsbasierter Lernzyklus&ldquo; (Handeln &rarr; Reflexion &rarr; Abstraktion &rarr; Experimentieren) ist der effektivste Weg, KI zu vermitteln.</li>
+                <li class="mb-2"><strong>Entscheidung:</strong> Entwicklung einer spezialisierten &bdquo;KI-Werkbank&ldquo;, in der Nutzer:innen eigene Bilderkennungsmodelle trainieren und Ausgaben (Text, Bild oder Audio) steuern können.</li>
+                <li class="mb-2"><strong>Entscheidung:</strong> Alle Ergebnisse als Open Educational Resources (OER) kostenlos bereitstellen, um Bildungsgerechtigkeit zu fördern.</li>
+              </ul>
+
+              <!-- Lösung -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Lösung</h2>
+              <p class="fs-lg mb-3">Die Lösung besteht aus mehreren Modulen:</p>
+              <ul class="fs-lg mb-0">
+                <li class="mb-2"><strong>KI-Werkbank:</strong> Ein Werkzeug zum Trainieren und Testen von Bilderkennungssystemen.</li>
+                <li class="mb-2"><strong>KI-Exploratorium:</strong> Ein physischer, ausstellungsähnlicher Raum, in dem Teilnehmende Rätsel lösen, um KI-Prinzipien zu erlernen.</li>
+                <li class="mb-2"><strong>Workshop-Formate:</strong> 1-Tages-Grundlagen (Fokus auf Komponenten und Lernprozesse) und 2&ndash;3-Tages-Vertiefungen (einschließlich Deepfakes, Ethik und einer Design-Challenge).</li>
+                <li class="mb-2"><strong>KI-App-Builder:</strong> Ein Online-Tool zum Erstellen einfacher KI-Anwendungen.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Images -->
+        <div class="row py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
+          <div class="col-sm-7 mb-4 mb-sm-0">
+            <div class="rounded-5 overflow-hidden bg-secondary d-flex align-items-center justify-content-center" style="min-height: 350px;" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+              <i class="ai-image display-1 text-body-secondary opacity-50"></i>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="rounded-5 overflow-hidden bg-secondary d-flex align-items-center justify-content-center h-100" style="min-height: 300px;" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200" data-aos-delay="150">
+              <i class="ai-image display-1 text-body-secondary opacity-50"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Erprobung / Validierung -->
+        <div class="row pt-sm-3 pt-md-4 pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+          <div class="col-md-7 col-xl-6 mb-4 mb-md-0">
+            <h2 class="h1 pb-2">Erprobung &amp; Validierung</h2>
+            <p class="fs-lg mb-0">Das Projekt wurde umfassend erprobt. Frühe Prototypen wurden im März 2023 mit erfahrenen Trainer:innen bei meredo e.V. getestet, um den pädagogischen Ansatz anhand ihres Feedbacks zu verfeinern. Der iterative Designprozess stellte eine kontinuierliche Verbesserung sicher.</p>
+          </div>
+          <div class="col-md-5 offset-xl-1">
+            <div class="row row-cols-2 gx-3 gx-sm-4">
+              <div class="col">
+                <div class="h2 display-2 mb-1">250+</div>
+                <p class="fs-sm mb-0">Jugendliche getestet</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">60+</div>
+                <p class="fs-sm mb-0">Trainer:innen eingebunden</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- More images -->
+        <div class="row py-5 my-lg-3 my-xl-4 my-xxl-5">
+          <div class="col-sm-5 mb-4 mb-sm-0">
+            <div class="rounded-5 overflow-hidden bg-secondary d-flex align-items-center justify-content-center" style="min-height: 300px;" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+              <i class="ai-image display-1 text-body-secondary opacity-50"></i>
+            </div>
+          </div>
+          <div class="col-sm-7">
+            <div class="rounded-5 overflow-hidden bg-secondary d-flex align-items-center justify-content-center h-100" style="min-height: 350px;" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200" data-aos-delay="150">
+              <i class="ai-image display-1 text-body-secondary opacity-50"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ergebnisse -->
+        <div class="row pt-1 pt-sm-3 pt-md-4 pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8 pb-1 pb-sm-3 pb-md-4">
+            <h2 class="h1 pb-sm-2 pb-lg-3">Ergebnisse &amp; Wirkung</h2>
+            <p class="fs-lg">Das Feedback der Teilnehmenden bestätigte die Wirksamkeit des Ansatzes:</p>
+            <div class="row row-cols-3 pt-2 pt-sm-3 pt-md-4 pt-xl-5 my-3">
+              <div class="col">
+                <div class="h2 display-2 mb-1">89%</div>
+                <p class="fs-sm mb-0">Fanden die Workshops ansprechend</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">91%</div>
+                <p class="fs-sm mb-0">Gaben an, die Workshops seien hilfreich für den Aufbau von KI-Kompetenzen</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">OER</div>
+                <p class="fs-sm mb-0">Alle Ergebnisse frei verfügbar als Open Educational Resources</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 pt-4">
+            <h3 class="h4 pb-2">Erwartete Wirkung</h3>
+            <ul class="fs-lg mb-4">
+              <li class="mb-2"><strong>Gesellschaftlich:</strong> Mündige Bürger:innen, die KI-Regulierung kritisch reflektieren und sich vor Manipulation schützen können.</li>
+              <li class="mb-2"><strong>Bildung:</strong> Skalierbarer Multiplikator:innen-Effekt, bei dem geschulte Pädagog:innen Hunderte weiterer Jugendlicher erreichen.</li>
+              <li class="mb-2"><strong>Wirtschaftlich:</strong> Verbesserte Zukunftsperspektiven für junge Menschen in einem wachsenden Technologiesektor.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Zentrale Erkenntnisse -->
+        <div class="row pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8">
+            <h2 class="h1 pb-sm-2 pb-lg-3">Zentrale Erkenntnisse</h2>
+            <ul class="fs-lg mb-0">
+              <li class="mb-3"><strong>Interaktiv schlägt Passiv:</strong> Teilnehmende lobten besonders den praktischen Charakter und die Möglichkeit, Dinge selbst auszuprobieren.</li>
+              <li class="mb-3"><strong>Reflexion ist der Schlüssel:</strong> Technisches Verständnis muss mit ethischer Reflexion (z.B. Diskussion über Deepfakes) gepaart werden, um echte Souveränität zu erreichen.</li>
+              <li class="mb-3"><strong>Organisation ist wichtig:</strong> Gut organisierte Workshops mit klaren Erklärungen werden von der Zielgruppe hoch geschätzt.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Back to projects -->
+      <section class="container pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+        <div class="border-top pt-4 pt-sm-5">
+          <a class="btn btn-lg btn-outline-primary" href="projekte.html">
+            <i class="ai-arrow-left me-2"></i>
+            Zurück zu allen Projekten
+          </a>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="../assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Germany</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projekte.html">Projekte</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="forschung.html">Forschung</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publikationen.html">Publikationen</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Rechtliches</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Kontakt</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:info@eipcm.org">info@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="kontakt.html">Kontakt aufnehmen</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="../assets/vendor/aos/dist/aos.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="../assets/js/theme.min.js"></script>
+    <script src="../assets/js/cookie-consent.js"></script>
+  </body>
+</html>

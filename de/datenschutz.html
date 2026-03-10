@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light" style="font-size: 15px;">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO meta tags -->
+    <title>Datenschutzerkl&auml;rung - EIPCM</title>
+    <meta name="description" content="Datenschutzerkl&auml;rung des European Institute for Participatory Media e.V. (EIPCM).">
+    <meta name="author" content="EIPCM">
+
+    <!-- Favicon / App icons -->
+    <link rel="icon" type="image/png" href="../assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/app-icons/icon-180x180.png">
+
+    <!-- Import Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="../assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <!-- Custom overrides -->
+    <style>
+      /* Body font: Open Sans, Headings: Titillium Web */
+      body { font-family: "Open Sans", sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-family: "Titillium Web", sans-serif !important;
+      }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      /* Footer text color */
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      /* Footer hover color */
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      /* Content link color */
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      /* Keep buttons/inputs unselectable */
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
+    </style>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Laden...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light" style="padding-top: 2.5rem; padding-bottom: 2.5rem; transition: padding .3s ease, background-color .1s ease-in-out;">
+        <div class="container">
+
+          <!-- Navbar brand -->
+          <a class="navbar-brand pe-sm-3 position-relative" href="index.html" style="width: 140px; height: 48px; transition: width .3s ease, height .3s ease;">
+            <img class="navbar-logo-large position-absolute start-0 top-50 translate-middle-y" src="../assets/img/eipcm-logo.svg" alt="EIPCM" width="140" style="transition: opacity .3s ease;">
+            <img class="navbar-logo-small position-absolute start-0 top-50 translate-middle-y" src="../assets/img/eipcm-logo-small.svg" alt="EIPCM" width="118" height="40" style="opacity: 0; transition: opacity .3s ease;">
+          </a>
+
+          <!-- LinkedIn icon -->
+          <a class="nav-link fs-xl order-lg-2 ms-lg-4 p-2 d-none d-lg-inline-flex" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ai-linkedin"></i>
+          </a>
+
+          <!-- Contact button -->
+          <a class="btn btn-secondary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex ms-auto ms-lg-3" href="kontakt.html">
+            Kontakt
+          </a>
+
+          <!-- Language switcher -->
+          <span class="order-lg-4 d-none d-sm-inline-flex align-items-center ms-3 fs-sm">
+            <a href="../privacy.html" class="text-decoration-none text-muted">EN</a>
+            <span class="mx-1 text-muted">|</span>
+            <strong class="text-nav">DE</strong>
+          </span>
+
+          <!-- Mobile menu toggler -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse -->
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item">
+                <a class="nav-link" href="projekte.html">Projekte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="forschung.html">Forschung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="publikationen.html">Publikationen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="training.html">Training</a>
+              </li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-secondary w-100 mb-1" href="kontakt.html">Kontakt</a>
+            </div>
+            <div class="d-sm-none text-center pb-3">
+              <a href="../privacy.html" class="text-decoration-none text-muted">EN</a>
+              <span class="mx-2 text-muted">|</span>
+              <strong class="text-nav">DE</strong>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page content -->
+      <section class="container py-5 mt-5">
+        <div class="row pt-lg-4 pb-5">
+          <div class="col-lg-8">
+
+            <h1 class="mb-4" style="padding-top: 30px;">Datenschutzerkl&auml;rung</h1>
+
+            <p>Wir freuen uns sehr &uuml;ber Ihr Interesse an unserem Verein. Datenschutz hat einen besonders hohen Stellenwert f&uuml;r die Leitung des European Institute for Participatory Media e.V.. Die Nutzung der Internetseiten des European Institute for Participatory Media e.V. ist grunds&auml;tzlich ohne jede Angabe personenbezogener Daten m&ouml;glich. Sofern eine betroffene Person besondere Services unseres Vereins &uuml;ber unsere Internetseite in Anspruch nehmen m&ouml;chte, k&ouml;nnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht f&uuml;r eine solche Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.</p>
+
+            <p>Die Verarbeitung personenbezogener Daten, beispielsweise des Namens, der Anschrift, der E-Mail-Adresse oder der Telefonnummer einer betroffenen Person, erfolgt stets im Einklang mit der Datenschutz-Grundverordnung (DSGVO) und in &Uuml;bereinstimmung mit den f&uuml;r das European Institute for Participatory Media e.V. geltenden landesspezifischen Datenschutzbestimmungen. Mittels dieser Datenschutzerkl&auml;rung m&ouml;chte unser Verein die &Ouml;ffentlichkeit &uuml;ber Art, Umfang und Zweck der von uns erhobenen, genutzten und verarbeiteten personenbezogenen Daten informieren. Ferner werden betroffene Personen mittels dieser Datenschutzerkl&auml;rung &uuml;ber die ihnen zustehenden Rechte aufgekl&auml;rt.</p>
+
+            <p>Das European Institute for Participatory Media e.V. hat als f&uuml;r die Verarbeitung Verantwortlicher zahlreiche technische und organisatorische Ma&szlig;nahmen umgesetzt, um einen m&ouml;glichst l&uuml;ckenlosen Schutz der &uuml;ber diese Internetseite verarbeiteten personenbezogenen Daten sicherzustellen. Dennoch k&ouml;nnen internetbasierte Daten&uuml;bertragungen grunds&auml;tzlich Sicherheitsl&uuml;cken aufweisen, sodass ein absoluter Schutz nicht gew&auml;hrleistet werden kann. Aus diesem Grund steht es jeder betroffenen Person frei, personenbezogene Daten auch auf alternativen Wegen, beispielsweise telefonisch, an uns zu &uuml;bermitteln.</p>
+
+            <h2 class="h4 mt-4 mb-3">1. Begriffsbestimmungen</h2>
+            <p>Die Datenschutzerkl&auml;rung des European Institute for Participatory Media e.V. beruht auf den Begrifflichkeiten, die durch den Europ&auml;ischen Richtlinien- und Verordnungsgeber beim Erlass der Datenschutz-Grundverordnung (DSGVO) verwendet wurden. Unsere Datenschutzerkl&auml;rung soll sowohl f&uuml;r die &Ouml;ffentlichkeit als auch f&uuml;r unsere Kunden und Gesch&auml;ftspartner einfach lesbar und verst&auml;ndlich sein. Um dies zu gew&auml;hrleisten, m&ouml;chten wir vorab die verwendeten Begrifflichkeiten erl&auml;utern.</p>
+            <p>Wir verwenden in dieser Datenschutzerkl&auml;rung unter anderem die folgenden Begriffe:</p>
+            <ul>
+              <li class="mb-2"><strong>a) Personenbezogene Daten</strong><br>Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare nat&uuml;rliche Person (im Folgenden &bdquo;betroffene Person&ldquo;) beziehen. Als identifizierbar wird eine nat&uuml;rliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identit&auml;t dieser nat&uuml;rlichen Person sind.</li>
+              <li class="mb-2"><strong>b) Betroffene Person</strong><br>Betroffene Person ist jede identifizierte oder identifizierbare nat&uuml;rliche Person, deren personenbezogene Daten von dem f&uuml;r die Verarbeitung Verantwortlichen verarbeitet werden.</li>
+              <li class="mb-2"><strong>c) Verarbeitung</strong><br>Verarbeitung ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgef&uuml;hrte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Ver&auml;nderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch &Uuml;bermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verkn&uuml;pfung, die Einschr&auml;nkung, das L&ouml;schen oder die Vernichtung.</li>
+              <li class="mb-2"><strong>d) Einschr&auml;nkung der Verarbeitung</strong><br>Einschr&auml;nkung der Verarbeitung ist die Markierung gespeicherter personenbezogener Daten mit dem Ziel, ihre k&uuml;nftige Verarbeitung einzuschr&auml;nken.</li>
+              <li class="mb-2"><strong>e) Profiling</strong><br>Profiling ist jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um bestimmte pers&ouml;nliche Aspekte, die sich auf eine nat&uuml;rliche Person beziehen, zu bewerten, insbesondere um Aspekte bez&uuml;glich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit, pers&ouml;nlicher Vorlieben, Interessen, Zuverl&auml;ssigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser nat&uuml;rlichen Person zu analysieren oder vorherzusagen.</li>
+              <li class="mb-2"><strong>f) Pseudonymisierung</strong><br>Pseudonymisierung ist die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung zus&auml;tzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden k&ouml;nnen, sofern diese zus&auml;tzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Ma&szlig;nahmen unterliegen, die gew&auml;hrleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren nat&uuml;rlichen Person zugewiesen werden.</li>
+              <li class="mb-2"><strong>g) Verantwortlicher oder f&uuml;r die Verarbeitung Verantwortlicher</strong><br>Verantwortlicher oder f&uuml;r die Verarbeitung Verantwortlicher ist die nat&uuml;rliche oder juristische Person, Beh&ouml;rde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet. Sind die Zwecke und Mittel dieser Verarbeitung durch das Unionsrecht oder das Recht der Mitgliedstaaten vorgegeben, so kann der Verantwortliche beziehungsweise k&ouml;nnen die bestimmten Kriterien seiner Benennung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten vorgesehen werden.</li>
+              <li class="mb-2"><strong>h) Auftragsverarbeiter</strong><br>Auftragsverarbeiter ist eine nat&uuml;rliche oder juristische Person, Beh&ouml;rde, Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.</li>
+              <li class="mb-2"><strong>i) Empf&auml;nger</strong><br>Empf&auml;nger ist eine nat&uuml;rliche oder juristische Person, Beh&ouml;rde, Einrichtung oder andere Stelle, der personenbezogene Daten offengelegt werden, unabh&auml;ngig davon, ob es sich bei ihr um einen Dritten handelt oder nicht. Beh&ouml;rden, die im Rahmen eines bestimmten Untersuchungsauftrags nach dem Unionsrecht oder dem Recht der Mitgliedstaaten m&ouml;glicherweise personenbezogene Daten erhalten, gelten jedoch nicht als Empf&auml;nger.</li>
+              <li class="mb-2"><strong>j) Dritter</strong><br>Dritter ist eine nat&uuml;rliche oder juristische Person, Beh&ouml;rde, Einrichtung oder andere Stelle, au&szlig;er der betroffenen Person, dem Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter der unmittelbaren Verantwortung des Verantwortlichen oder des Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten.</li>
+              <li class="mb-2"><strong>k) Einwilligung</strong><br>Einwilligung der betroffenen Person ist jede freiwillig f&uuml;r den bestimmten Fall, in informierter Weise und unmissverst&auml;ndlich abgegebene Willensbekundung in Form einer Erkl&auml;rung oder einer sonstigen eindeutigen best&auml;tigenden Handlung, mit der die betroffene Person zu verstehen gibt, dass sie mit der Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden ist.</li>
+            </ul>
+
+            <h2 class="h4 mt-4 mb-3">2. Name und Anschrift des Verantwortlichen</h2>
+            <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO), sonstiger in den Mitgliedstaaten der Europ&auml;ischen Union geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist:</p>
+            <p>
+              European Institute for Participatory Media e.V.<br>
+              Pariser Platz 6<br>
+              10117 Berlin<br>
+              Deutschland<br>
+              Telefon: +49 30 2007 61 94<br>
+              E-Mail: <a href="mailto:info@eipcm.org">info@eipcm.org</a><br>
+              Webseite: <a href="https://www.eipcm.org">www.eipcm.org</a>
+            </p>
+
+            <h2 class="h4 mt-4 mb-3">3. Erfassung von allgemeinen Daten und Informationen</h2>
+            <p>Die Internetseite des European Institute for Participatory Media e.V. erfasst mit jedem Aufruf der Internetseite durch eine betroffene Person oder ein automatisiertes System eine Reihe von allgemeinen Daten und Informationen. Diese allgemeinen Daten und Informationen werden in den Logfiles des Servers gespeichert. Erfasst werden k&ouml;nnen die (1) verwendeten Browsertypen und Versionen, (2) das vom zugreifenden System verwendete Betriebssystem, (3) die Internetseite, von welcher ein zugreifendes System auf unsere Internetseite gelangt (sogenannte Referrer), (4) die Unterwebseiten, (5) das Datum und die Uhrzeit eines Zugriffs auf die Internetseite, (6) eine Internet-Protokoll-Adresse (IP-Adresse), (7) der Internet-Service-Provider des zugreifenden Systems und (8) sonstige &auml;hnliche Daten und Informationen, die der Gefahrenabwehr im Falle von Angriffen auf unsere informationstechnologischen Systeme dienen.</p>
+            <p>Bei der Nutzung dieser allgemeinen Daten und Informationen zieht das European Institute for Participatory Media e.V. keine R&uuml;ckschl&uuml;sse auf die betroffene Person. Diese Informationen werden vielmehr ben&ouml;tigt, um (1) die Inhalte unserer Internetseite korrekt auszuliefern, (2) die Inhalte unserer Internetseite sowie die Werbung f&uuml;r diese zu optimieren, (3) die dauerhafte Funktionsf&auml;higkeit unserer informationstechnologischen Systeme und der Technik unserer Internetseite zu gew&auml;hrleisten sowie (4) um Strafverfolgungsbeh&ouml;rden im Falle eines Cyberangriffes die zur Strafverfolgung notwendigen Informationen bereitzustellen. Diese anonym erhobenen Daten und Informationen werden durch das European Institute for Participatory Media e.V. daher einerseits statistisch und ferner mit dem Ziel ausgewertet, den Datenschutz und die Datensicherheit in unserem Verein zu erh&ouml;hen, um letztlich ein optimales Schutzniveau f&uuml;r die von uns verarbeiteten personenbezogenen Daten sicherzustellen. Die anonymen Daten der Server-Logfiles werden getrennt von allen durch eine betroffene Person angegebenen personenbezogenen Daten gespeichert.</p>
+
+            <h2 class="h4 mt-4 mb-3">4. Routinem&auml;&szlig;ige L&ouml;schung und Sperrung von personenbezogenen Daten</h2>
+            <p>Der f&uuml;r die Verarbeitung Verantwortliche verarbeitet und speichert personenbezogene Daten der betroffenen Person nur f&uuml;r den Zeitraum, der zur Erreichung des Speicherungszwecks erforderlich ist, oder sofern dies durch den Europ&auml;ischen Richtlinien- und Verordnungsgeber oder einen anderen Gesetzgeber in Gesetzen oder Vorschriften, welchen der f&uuml;r die Verarbeitung Verantwortliche unterliegt, vorgesehen wurde.</p>
+            <p>Entf&auml;llt der Speicherungszweck oder l&auml;uft eine vom Europ&auml;ischen Richtlinien- und Verordnungsgeber oder einem anderen zust&auml;ndigen Gesetzgeber vorgeschriebene Speicherfrist ab, werden die personenbezogenen Daten routinem&auml;&szlig;ig und entsprechend den gesetzlichen Vorschriften gesperrt oder gel&ouml;scht.</p>
+
+            <h2 class="h4 mt-4 mb-3">5. Rechte der betroffenen Person</h2>
+
+            <h3 class="h5 mt-3 mb-2">a) Recht auf Best&auml;tigung</h3>
+            <p>Jede betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber einger&auml;umte Recht, von dem f&uuml;r die Verarbeitung Verantwortlichen eine Best&auml;tigung dar&uuml;ber zu verlangen, ob sie betreffende personenbezogene Daten verarbeitet werden. M&ouml;chte eine betroffene Person dieses Best&auml;tigungsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen Mitarbeiter des f&uuml;r die Verarbeitung Verantwortlichen wenden.</p>
+
+            <h3 class="h5 mt-3 mb-2">b) Auskunftsrecht</h3>
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber gew&auml;hrte Recht, jederzeit von dem f&uuml;r die Verarbeitung Verantwortlichen unentgeltliche Auskunft &uuml;ber die zu seiner Person gespeicherten personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten. Ferner hat der Europ&auml;ische Richtlinien- und Verordnungsgeber der betroffenen Person Auskunft &uuml;ber folgende Informationen zugestanden:</p>
+            <ul class="mb-3">
+              <li>die Verarbeitungszwecke;</li>
+              <li>die Kategorien personenbezogener Daten, die verarbeitet werden;</li>
+              <li>die Empf&auml;nger oder Kategorien von Empf&auml;ngern, gegen&uuml;ber denen die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden, insbesondere bei Empf&auml;ngern in Drittl&auml;ndern oder bei internationalen Organisationen;</li>
+              <li>falls m&ouml;glich die geplante Dauer, f&uuml;r die die personenbezogenen Daten gespeichert werden, oder, falls dies nicht m&ouml;glich ist, die Kriterien f&uuml;r die Festlegung dieser Dauer;</li>
+              <li>das Bestehen eines Rechts auf Berichtigung oder L&ouml;schung der sie betreffenden personenbezogenen Daten oder auf Einschr&auml;nkung der Verarbeitung durch den Verantwortlichen oder eines Widerspruchsrechts gegen diese Verarbeitung;</li>
+              <li>das Bestehen eines Beschwerderechts bei einer Aufsichtsbeh&ouml;rde;</li>
+              <li>wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden, alle verf&uuml;gbaren Informationen &uuml;ber die Herkunft der Daten;</li>
+              <li>das Bestehen einer automatisierten Entscheidungsfindung einschlie&szlig;lich Profiling gem&auml;&szlig; Art. 22 Abs. 1 und 4 DSGVO und &mdash; zumindest in diesen F&auml;llen &mdash; aussagekr&auml;ftige Informationen &uuml;ber die involvierte Logik sowie die Tragweite und die angestrebten Auswirkungen einer derartigen Verarbeitung f&uuml;r die betroffene Person.</li>
+            </ul>
+            <p>Ferner steht der betroffenen Person ein Auskunftsrecht dar&uuml;ber zu, ob personenbezogene Daten an ein Drittland oder an eine internationale Organisation &uuml;bermittelt wurden. Sofern dies der Fall ist, so steht der betroffenen Person im &Uuml;brigen das Recht zu, Auskunft &uuml;ber die geeigneten Garantien im Zusammenhang mit der &Uuml;bermittlung zu erhalten.</p>
+            <p>M&ouml;chte eine betroffene Person dieses Auskunftsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen Mitarbeiter des f&uuml;r die Verarbeitung Verantwortlichen wenden.</p>
+
+            <h3 class="h5 mt-3 mb-2">c) Recht auf Berichtigung</h3>
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber gew&auml;hrte Recht, die unverz&uuml;gliche Berichtigung sie betreffender unrichtiger personenbezogener Daten zu verlangen. Ferner steht der betroffenen Person unter Ber&uuml;cksichtigung der Zwecke der Verarbeitung das Recht zu, die Vervollst&auml;ndigung unvollst&auml;ndiger personenbezogener Daten &mdash; auch mittels einer erg&auml;nzenden Erkl&auml;rung &mdash; zu verlangen.</p>
+            <p>M&ouml;chte eine betroffene Person dieses Berichtigungsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen Mitarbeiter des f&uuml;r die Verarbeitung Verantwortlichen wenden.</p>
+
+            <h3 class="h5 mt-3 mb-2">d) Recht auf L&ouml;schung (Recht auf Vergessenwerden)</h3>
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber gew&auml;hrte Recht, von dem Verantwortlichen zu verlangen, dass die sie betreffenden personenbezogenen Daten unverz&uuml;glich gel&ouml;scht werden, sofern einer der folgenden Gr&uuml;nde zutrifft und soweit die Verarbeitung nicht erforderlich ist:</p>
+            <ul class="mb-3">
+              <li>Die personenbezogenen Daten wurden f&uuml;r solche Zwecke erhoben oder auf sonstige Weise verarbeitet, f&uuml;r welche sie nicht mehr notwendig sind.</li>
+              <li>Die betroffene Person widerruft ihre Einwilligung, auf die sich die Verarbeitung gem&auml;&szlig; Art. 6 Abs. 1 Buchstabe a DSGVO oder Art. 9 Abs. 2 Buchstabe a DSGVO st&uuml;tzte, und es fehlt an einer anderweitigen Rechtsgrundlage f&uuml;r die Verarbeitung.</li>
+              <li>Die betroffene Person legt gem&auml;&szlig; Art. 21 Abs. 1 DSGVO Widerspruch gegen die Verarbeitung ein, und es liegen keine vorrangigen berechtigten Gr&uuml;nde f&uuml;r die Verarbeitung vor, oder die betroffene Person legt gem&auml;&szlig; Art. 21 Abs. 2 DSGVO Widerspruch gegen die Verarbeitung ein.</li>
+              <li>Die personenbezogenen Daten wurden unrechtm&auml;&szlig;ig verarbeitet.</li>
+              <li>Die L&ouml;schung der personenbezogenen Daten ist zur Erf&uuml;llung einer rechtlichen Verpflichtung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten erforderlich, dem der Verantwortliche unterliegt.</li>
+              <li>Die personenbezogenen Daten wurden in Bezug auf angebotene Dienste der Informationsgesellschaft gem&auml;&szlig; Art. 8 Abs. 1 DSGVO erhoben.</li>
+            </ul>
+            <p>Sofern einer der oben genannten Gr&uuml;nde zutrifft und eine betroffene Person die L&ouml;schung von personenbezogenen Daten, die beim European Institute for Participatory Media e.V. gespeichert sind, veranlassen m&ouml;chte, kann sie sich hierzu jederzeit an einen Mitarbeiter des f&uuml;r die Verarbeitung Verantwortlichen wenden. Der Mitarbeiter des European Institute for Participatory Media e.V. wird veranlassen, dass dem L&ouml;schverlangen unverz&uuml;glich nachgekommen wird.</p>
+            <p>Wurden die personenbezogenen Daten vom European Institute for Participatory Media e.V. &ouml;ffentlich gemacht und ist unser Verein als Verantwortlicher gem&auml;&szlig; Art. 17 Abs. 1 DSGVO zur L&ouml;schung der personenbezogenen Daten verpflichtet, so trifft das European Institute for Participatory Media e.V. unter Ber&uuml;cksichtigung der verf&uuml;gbaren Technologie und der Implementierungskosten angemessene Ma&szlig;nahmen, auch technischer Art, um andere f&uuml;r die Datenverarbeitung Verantwortliche, welche die ver&ouml;ffentlichten personenbezogenen Daten verarbeiten, dar&uuml;ber in Kenntnis zu setzen, dass die betroffene Person von diesen anderen f&uuml;r die Datenverarbeitung Verantwortlichen die L&ouml;schung s&auml;mtlicher Links zu diesen personenbezogenen Daten oder von Kopien oder Replikationen dieser personenbezogenen Daten verlangt hat, soweit die Verarbeitung nicht erforderlich ist. Der Mitarbeiter des European Institute for Participatory Media e.V. wird im Einzelfall das Notwendige veranlassen.</p>
+
+            <h3 class="h5 mt-3 mb-2">e) Recht auf Einschr&auml;nkung der Verarbeitung</h3>
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber gew&auml;hrte Recht, von dem Verantwortlichen die Einschr&auml;nkung der Verarbeitung zu verlangen, wenn eine der folgenden Voraussetzungen gegeben ist:</p>
+            <ul class="mb-3">
+              <li>Die Richtigkeit der personenbezogenen Daten wird von der betroffenen Person bestritten, und zwar f&uuml;r eine Dauer, die es dem Verantwortlichen erm&ouml;glicht, die Richtigkeit der personenbezogenen Daten zu &uuml;berpr&uuml;fen.</li>
+              <li>Die Verarbeitung ist unrechtm&auml;&szlig;ig, die betroffene Person lehnt die L&ouml;schung der personenbezogenen Daten ab und verlangt stattdessen die Einschr&auml;nkung der Nutzung der personenbezogenen Daten.</li>
+              <li>Der Verantwortliche ben&ouml;tigt die personenbezogenen Daten f&uuml;r die Zwecke der Verarbeitung nicht l&auml;nger, die betroffene Person ben&ouml;tigt sie jedoch zur Geltendmachung, Aus&uuml;bung oder Verteidigung von Rechtsanspr&uuml;chen.</li>
+              <li>Die betroffene Person hat Widerspruch gegen die Verarbeitung gem. Art. 21 Abs. 1 DSGVO eingelegt und es steht noch nicht fest, ob die berechtigten Gr&uuml;nde des Verantwortlichen gegen&uuml;ber denen der betroffenen Person &uuml;berwiegen.</li>
+            </ul>
+            <p>Sofern eine der oben genannten Voraussetzungen gegeben ist und eine betroffene Person die Einschr&auml;nkung von personenbezogenen Daten, die beim European Institute for Participatory Media e.V. gespeichert sind, verlangen m&ouml;chte, kann sie sich hierzu jederzeit an einen Mitarbeiter des f&uuml;r die Verarbeitung Verantwortlichen wenden. Der Mitarbeiter des European Institute for Participatory Media e.V. wird die Einschr&auml;nkung der Verarbeitung veranlassen.</p>
+
+            <h3 class="h5 mt-3 mb-2">f) Recht auf Daten&uuml;bertragbarkeit</h3>
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber gew&auml;hrte Recht, die sie betreffenden personenbezogenen Daten, welche durch die betroffene Person einem Verantwortlichen bereitgestellt wurden, in einem strukturierten, g&auml;ngigen und maschinenlesbaren Format zu erhalten. Sie hat au&szlig;erdem das Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen Daten bereitgestellt wurden, zu &uuml;bermitteln, sofern die Verarbeitung auf der Einwilligung gem&auml;&szlig; Art. 6 Abs. 1 Buchstabe a DSGVO oder Art. 9 Abs. 2 Buchstabe a DSGVO oder auf einem Vertrag gem&auml;&szlig; Art. 6 Abs. 1 Buchstabe b DSGVO beruht und die Verarbeitung mithilfe automatisierter Verfahren erfolgt, sofern die Verarbeitung nicht f&uuml;r die Wahrnehmung einer Aufgabe erforderlich ist, die im &ouml;ffentlichen Interesse liegt oder in Aus&uuml;bung &ouml;ffentlicher Gewalt erfolgt, welche dem Verantwortlichen &uuml;bertragen wurde.</p>
+            <p>Ferner hat die betroffene Person bei der Aus&uuml;bung ihres Rechts auf Daten&uuml;bertragbarkeit gem&auml;&szlig; Art. 20 Abs. 1 DSGVO das Recht, zu erwirken, dass die personenbezogenen Daten direkt von einem Verantwortlichen an einen anderen Verantwortlichen &uuml;bermittelt werden, soweit dies technisch machbar ist und sofern hiervon nicht die Rechte und Freiheiten anderer Personen beeintr&auml;chtigt werden.</p>
+            <p>Zur Geltendmachung des Rechts auf Daten&uuml;bertragbarkeit kann sich die betroffene Person jederzeit an einen Mitarbeiter des European Institute for Participatory Media e.V. wenden.</p>
+
+            <h3 class="h5 mt-3 mb-2">g) Recht auf Widerspruch</h3>
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber gew&auml;hrte Recht, aus Gr&uuml;nden, die sich aus ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung sie betreffender personenbezogener Daten, die aufgrund von Art. 6 Abs. 1 Buchstaben e oder f DSGVO erfolgt, Widerspruch einzulegen. Dies gilt auch f&uuml;r ein auf diese Bestimmungen gest&uuml;tztes Profiling.</p>
+            <p>Das European Institute for Participatory Media e.V. verarbeitet die personenbezogenen Daten im Falle des Widerspruchs nicht mehr, es sei denn, wir k&ouml;nnen zwingende schutzw&uuml;rdige Gr&uuml;nde f&uuml;r die Verarbeitung nachweisen, die den Interessen, Rechten und Freiheiten der betroffenen Person &uuml;berwiegen, oder die Verarbeitung dient der Geltendmachung, Aus&uuml;bung oder Verteidigung von Rechtsanspr&uuml;chen.</p>
+            <p>Verarbeitet das European Institute for Participatory Media e.V. personenbezogene Daten, um Direktwerbung zu betreiben, so hat die betroffene Person das Recht, jederzeit Widerspruch gegen die Verarbeitung der personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen. Dies gilt auch f&uuml;r das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht. Widerspricht die betroffene Person gegen&uuml;ber dem European Institute for Participatory Media e.V. der Verarbeitung f&uuml;r Zwecke der Direktwerbung, so wird das European Institute for Participatory Media e.V. die personenbezogenen Daten nicht mehr f&uuml;r diese Zwecke verarbeiten.</p>
+            <p>Zudem hat die betroffene Person das Recht, aus Gr&uuml;nden, die sich aus ihrer besonderen Situation ergeben, gegen die sie betreffende Verarbeitung personenbezogener Daten, die beim European Institute for Participatory Media e.V. zu wissenschaftlichen oder historischen Forschungszwecken oder zu statistischen Zwecken gem&auml;&szlig; Art. 89 Abs. 1 DSGVO erfolgen, Widerspruch einzulegen, es sei denn, eine solche Verarbeitung ist zur Erf&uuml;llung einer im &ouml;ffentlichen Interesse liegenden Aufgabe erforderlich.</p>
+            <p>Zur Aus&uuml;bung des Rechts auf Widerspruch kann sich die betroffene Person an jeden Mitarbeiter des European Institute for Participatory Media e.V. wenden. Der betroffenen Person steht es ferner frei, im Zusammenhang mit der Nutzung von Diensten der Informationsgesellschaft, ungeachtet der Richtlinie 2002/58/EG, ihr Widerspruchsrecht mittels automatisierter Verfahren auszu&uuml;ben, bei denen technische Spezifikationen verwendet werden.</p>
+
+            <h3 class="h5 mt-3 mb-2">h) Automatisierte Entscheidungen im Einzelfall einschlie&szlig;lich Profiling</h3>
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber gew&auml;hrte Recht, nicht einer ausschlie&szlig;lich auf einer automatisierten Verarbeitung &mdash; einschlie&szlig;lich Profiling &mdash; beruhenden Entscheidung unterworfen zu werden, die ihr gegen&uuml;ber rechtliche Wirkung entfaltet oder sie in &auml;hnlicher Weise erheblich beeintr&auml;chtigt, sofern die Entscheidung (1) nicht f&uuml;r den Abschluss oder die Erf&uuml;llung eines Vertrags zwischen der betroffenen Person und dem Verantwortlichen erforderlich ist, oder (2) aufgrund von Rechtsvorschriften der Union oder der Mitgliedstaaten, denen der Verantwortliche unterliegt, zul&auml;ssig ist und diese Rechtsvorschriften angemessene Ma&szlig;nahmen zur Wahrung der Rechte und Freiheiten sowie der berechtigten Interessen der betroffenen Person enthalten, oder (3) mit ausdr&uuml;cklicher Einwilligung der betroffenen Person erfolgt.</p>
+            <p>Ist die Entscheidung (1) f&uuml;r den Abschluss oder die Erf&uuml;llung eines Vertrags zwischen der betroffenen Person und dem Verantwortlichen erforderlich oder (2) erfolgt sie mit ausdr&uuml;cklicher Einwilligung der betroffenen Person, trifft das European Institute for Participatory Media e.V. angemessene Ma&szlig;nahmen, um die Rechte und Freiheiten sowie die berechtigten Interessen der betroffenen Person zu wahren, wozu mindestens das Recht auf Erwirkung des Eingreifens einer Person seitens des Verantwortlichen, auf Darlegung des eigenen Standpunkts und auf Anfechtung der Entscheidung geh&ouml;rt.</p>
+            <p>M&ouml;chte die betroffene Person Rechte mit Bezug auf automatisierte Entscheidungen geltend machen, kann sie sich hierzu jederzeit an einen Mitarbeiter des f&uuml;r die Verarbeitung Verantwortlichen wenden.</p>
+
+            <h3 class="h5 mt-3 mb-2">i) Recht auf Widerruf einer datenschutzrechtlichen Einwilligung</h3>
+            <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europ&auml;ischen Richtlinien- und Verordnungsgeber gew&auml;hrte Recht, eine Einwilligung zur Verarbeitung personenbezogener Daten jederzeit zu widerrufen.</p>
+            <p>M&ouml;chte die betroffene Person ihr Recht auf Widerruf einer Einwilligung geltend machen, kann sie sich hierzu jederzeit an einen Mitarbeiter des European Institute for Participatory Media e.V. wenden.</p>
+
+            <h2 class="h4 mt-4 mb-3">6. Datenschutz bei Bewerbungen und im Bewerbungsverfahren</h2>
+            <p>Der f&uuml;r die Verarbeitung Verantwortliche erhebt und verarbeitet die personenbezogenen Daten von Bewerbern zum Zwecke der Abwicklung des Bewerbungsverfahrens. Die Verarbeitung kann auch auf elektronischem Wege erfolgen. Dies ist insbesondere dann der Fall, wenn ein Bewerber entsprechende Bewerbungsunterlagen auf elektronischem Wege, beispielsweise per E-Mail oder &uuml;ber ein auf der Internetseite befindliches Webformular, an den f&uuml;r die Verarbeitung Verantwortlichen &uuml;bermittelt. Schlie&szlig;t der f&uuml;r die Verarbeitung Verantwortliche einen Anstellungsvertrag mit einem Bewerber, werden die &uuml;bermittelten Daten zum Zwecke der Abwicklung des Besch&auml;ftigungsverh&auml;ltnisses unter Beachtung der gesetzlichen Vorschriften gespeichert. Wird von dem f&uuml;r die Verarbeitung Verantwortlichen kein Anstellungsvertrag mit dem Bewerber geschlossen, so werden die Bewerbungsunterlagen zwei Monate nach Bekanntgabe der Absageentscheidung automatisch gel&ouml;scht, sofern einer L&ouml;schung keine sonstigen berechtigten Interessen des f&uuml;r die Verarbeitung Verantwortlichen entgegenstehen. Sonstiges berechtigtes Interesse in diesem Sinne ist beispielsweise eine Beweispflicht in einem Verfahren nach dem Allgemeinen Gleichbehandlungsgesetz (AGG).</p>
+
+            <h2 class="h4 mt-4 mb-3">7. Datenschutzbestimmungen zu Einsatz und Verwendung von Twitter</h2>
+            <p>Der f&uuml;r die Verarbeitung Verantwortliche hat auf dieser Internetseite Komponenten von Twitter integriert. Twitter ist ein multilingualer, &ouml;ffentlich zug&auml;nglicher Mikroblogging-Dienst, auf welchem die Nutzer sogenannte Tweets, also Kurznachrichten, die auf 280 Zeichen begrenzt sind, ver&ouml;ffentlichen und verbreiten k&ouml;nnen. Diese Kurznachrichten sind f&uuml;r jedermann, also auch f&uuml;r nicht bei Twitter angemeldete Personen, abrufbar. Die Tweets werden aber auch den sogenannten Followern des jeweiligen Nutzers angezeigt. Follower sind andere Twitter-Nutzer, die den Tweets eines Nutzers folgen. Ferner erm&ouml;glicht es Twitter, &uuml;ber Hashtags, Verlinkungen oder Retweets ein breites Publikum anzusprechen.</p>
+            <p>Betreibergesellschaft von Twitter ist die Twitter, Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA.</p>
+            <p>Durch jeden Aufruf einer der Einzelseiten dieser Internetseite, die durch den f&uuml;r die Verarbeitung Verantwortlichen betrieben wird und auf welcher eine Twitter-Komponente (Twitter-Button) integriert wurde, wird der Internetbrowser auf dem informationstechnologischen System der betroffenen Person automatisch durch die jeweilige Twitter-Komponente veranlasst, eine Darstellung der entsprechenden Twitter-Komponente von Twitter herunterzuladen. Im Rahmen dieses technischen Verfahrens erh&auml;lt Twitter Kenntnis dar&uuml;ber, welche konkrete Unterseite unserer Internetseite durch die betroffene Person besucht wird. Zweck der Integration der Twitter-Komponente ist eine Weiterverbreitung der Inhalte dieser Internetseite, um unseren Nutzern zu erm&ouml;glichen, diese Webseite in der digitalen Welt bekannt zu machen und unsere Besucherzahlen zu erh&ouml;hen.</p>
+            <p>Sofern die betroffene Person gleichzeitig bei Twitter eingeloggt ist, erkennt Twitter mit jedem Aufruf unserer Internetseite durch die betroffene Person und w&auml;hrend der gesamten Dauer des jeweiligen Aufenthaltes auf unserer Internetseite, welche konkrete Unterseite unserer Internetseite die betroffene Person besucht. Diese Informationen werden durch die Twitter-Komponente gesammelt und durch Twitter dem jeweiligen Twitter-Account der betroffenen Person zugeordnet. Bet&auml;tigt die betroffene Person einen der auf unserer Internetseite integrierten Twitter-Buttons, werden die damit &uuml;bertragenen Daten und Informationen dem pers&ouml;nlichen Twitter-Benutzerkonto der betroffenen Person zugeordnet und von Twitter gespeichert und verarbeitet.</p>
+            <p>Twitter erh&auml;lt &uuml;ber die Twitter-Komponente immer dann eine Information dar&uuml;ber, dass die betroffene Person unsere Internetseite besucht hat, wenn die betroffene Person zum Zeitpunkt des Aufrufs unserer Internetseite gleichzeitig bei Twitter eingeloggt ist. Dies findet unabh&auml;ngig davon statt, ob die betroffene Person die Twitter-Komponente anklickt oder nicht. Ist eine derartige &Uuml;bermittlung dieser Informationen an Twitter von der betroffenen Person nicht gew&uuml;nscht, kann diese die &Uuml;bermittlung dadurch verhindern, dass sie sich vor einem Aufruf unserer Internetseite aus ihrem Twitter-Account ausloggt.</p>
+            <p>Die geltenden Datenschutzbestimmungen von Twitter sind unter <a href="https://twitter.com/privacy?lang=de" target="_blank" rel="noopener">https://twitter.com/privacy?lang=de</a> abrufbar.</p>
+
+            <h2 class="h4 mt-4 mb-3">8. Datenschutzbestimmungen zu Einsatz und Verwendung von YouTube</h2>
+            <p>Der f&uuml;r die Verarbeitung Verantwortliche hat auf dieser Internetseite Komponenten von YouTube integriert. YouTube ist ein Internet-Videoportal, das Video-Publishern das kostenlose Einstellen von Videoclips und anderen Nutzern die ebenfalls kostenfreie Betrachtung, Bewertung und Kommentierung dieser erm&ouml;glicht. YouTube gestattet die Publikation aller Arten von Videos, weshalb sowohl komplette Film- und Fernsehsendungen, aber auch Musikvideos, Trailer und von Nutzern selbst angefertigte Videos &uuml;ber das Internetportal abrufbar sind.</p>
+            <p>Betreibergesellschaft von YouTube ist die YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA. Die YouTube, LLC ist eine Tochtergesellschaft der Google Inc., 1600 Amphitheatre Pkwy, Mountain View, CA 94043-1351, USA.</p>
+            <p>Durch jeden Aufruf einer der Einzelseiten dieser Internetseite, die durch den f&uuml;r die Verarbeitung Verantwortlichen betrieben wird und auf welcher eine YouTube-Komponente (YouTube-Video) integriert wurde, wird der Internetbrowser auf dem informationstechnologischen System der betroffenen Person automatisch durch die jeweilige YouTube-Komponente veranlasst, eine Darstellung der entsprechenden YouTube-Komponente von YouTube herunterzuladen. Im Rahmen dieses technischen Verfahrens erhalten YouTube und Google Kenntnis dar&uuml;ber, welche konkrete Unterseite unserer Internetseite durch die betroffene Person besucht wird.</p>
+            <p>Sofern die betroffene Person gleichzeitig bei YouTube eingeloggt ist, erkennt YouTube mit dem Aufruf einer Unterseite, die ein YouTube-Video enth&auml;lt, welche konkrete Unterseite unserer Internetseite die betroffene Person besucht. Diese Informationen werden durch YouTube und Google gesammelt und dem jeweiligen YouTube-Konto der betroffenen Person zugeordnet.</p>
+            <p>YouTube und Google erhalten &uuml;ber die YouTube-Komponente immer dann eine Information dar&uuml;ber, dass die betroffene Person unsere Internetseite besucht hat, wenn die betroffene Person zum Zeitpunkt des Aufrufs unserer Internetseite gleichzeitig bei YouTube eingeloggt ist; dies findet unabh&auml;ngig davon statt, ob die betroffene Person ein YouTube-Video anklickt oder nicht. Ist eine derartige &Uuml;bermittlung dieser Informationen an YouTube und Google von der betroffenen Person nicht gew&uuml;nscht, kann diese die &Uuml;bermittlung dadurch verhindern, dass sie sich vor einem Aufruf unserer Internetseite aus ihrem YouTube-Account ausloggt.</p>
+            <p>Die von YouTube ver&ouml;ffentlichten Datenschutzbestimmungen, die unter <a href="https://www.google.com/intl/de/policies/privacy/" target="_blank" rel="noopener">https://www.google.com/intl/de/policies/privacy/</a> abrufbar sind, geben Aufschluss &uuml;ber die Erhebung, Verarbeitung und Nutzung personenbezogener Daten durch YouTube und Google.</p>
+
+            <h2 class="h4 mt-4 mb-3">9. Rechtsgrundlage der Verarbeitung</h2>
+            <p>Art. 6 Abs. 1 lit. a DSGVO dient unserem Verein als Rechtsgrundlage f&uuml;r Verarbeitungsvorg&auml;nge, bei denen wir eine Einwilligung f&uuml;r einen bestimmten Verarbeitungszweck einholen. Ist die Verarbeitung personenbezogener Daten zur Erf&uuml;llung eines Vertrags, dessen Vertragspartei die betroffene Person ist, erforderlich, wie dies beispielsweise bei Verarbeitungsvorg&auml;ngen der Fall ist, die f&uuml;r eine Lieferung von Waren oder die Erbringung einer sonstigen Leistung oder Gegenleistung notwendig sind, so beruht die Verarbeitung auf Art. 6 Abs. 1 lit. b DSGVO. Gleiches gilt f&uuml;r solche Verarbeitungsvorg&auml;nge, die zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich sind, etwa in F&auml;llen von Anfragen zu unseren Produkten oder Leistungen. Unterliegt unser Verein einer rechtlichen Verpflichtung, durch welche eine Verarbeitung von personenbezogenen Daten erforderlich wird, wie beispielsweise zur Erf&uuml;llung steuerlicher Pflichten, so basiert die Verarbeitung auf Art. 6 Abs. 1 lit. c DSGVO. In seltenen F&auml;llen k&ouml;nnte die Verarbeitung von personenbezogenen Daten erforderlich werden, um lebenswichtige Interessen der betroffenen Person oder einer anderen nat&uuml;rlichen Person zu sch&uuml;tzen. Dies w&auml;re beispielsweise der Fall, wenn ein Besucher in unserem Verein verletzt w&uuml;rde und daraufhin sein Name, sein Alter, seine Krankenkassendaten oder sonstige lebenswichtige Informationen an einen Arzt, ein Krankenhaus oder sonstige Dritte weitergegeben werden m&uuml;ssten. Dann w&uuml;rde die Verarbeitung auf Art. 6 Abs. 1 lit. d DSGVO beruhen. Letztlich k&ouml;nnten Verarbeitungsvorg&auml;nge auf Art. 6 Abs. 1 lit. f DSGVO beruhen. Auf dieser Rechtsgrundlage basieren Verarbeitungsvorg&auml;nge, die von keiner der vorgenannten Rechtsgrundlagen erfasst werden, wenn die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Vereins oder eines Dritten erforderlich ist, sofern die Interessen, Grundrechte und Grundfreiheiten des Betroffenen nicht &uuml;berwiegen. Solche Verarbeitungsvorg&auml;nge sind uns insbesondere deshalb gestattet, weil sie durch den Europ&auml;ischen Gesetzgeber besonders erw&auml;hnt wurden. Er vertrat insoweit die Auffassung, dass ein berechtigtes Interesse anzunehmen sein k&ouml;nnte, wenn die betroffene Person ein Kunde des Verantwortlichen ist (Erw&auml;gungsgrund 47 Satz 2 DSGVO).</p>
+
+            <h2 class="h4 mt-4 mb-3">10. Berechtigte Interessen an der Verarbeitung, die von dem Verantwortlichen oder einem Dritten verfolgt werden</h2>
+            <p>Basiert die Verarbeitung personenbezogener Daten auf Art. 6 Abs. 1 lit. f DSGVO, ist unser berechtigtes Interesse die Durchf&uuml;hrung unserer Gesch&auml;ftst&auml;tigkeit zugunsten des Wohlergehens all unserer Mitarbeiter und unserer Anteilseigner.</p>
+
+            <h2 class="h4 mt-4 mb-3">11. Dauer, f&uuml;r die die personenbezogenen Daten gespeichert werden</h2>
+            <p>Das Kriterium f&uuml;r die Dauer der Speicherung von personenbezogenen Daten ist die jeweilige gesetzliche Aufbewahrungsfrist. Nach Ablauf der Frist werden die entsprechenden Daten routinem&auml;&szlig;ig gel&ouml;scht, sofern sie nicht mehr zur Vertragserf&uuml;llung oder Vertragsanbahnung erforderlich sind.</p>
+
+            <h2 class="h4 mt-4 mb-3">12. Gesetzliche oder vertragliche Vorschriften zur Bereitstellung der personenbezogenen Daten; Erforderlichkeit f&uuml;r den Vertragsabschluss; Verpflichtung der betroffenen Person, die personenbezogenen Daten bereitzustellen; m&ouml;gliche Folgen der Nichtbereitstellung</h2>
+            <p>Wir kl&auml;ren Sie dar&uuml;ber auf, dass die Bereitstellung personenbezogener Daten zum Teil gesetzlich vorgeschrieben ist (z.B. Steuervorschriften) oder sich auch aus vertraglichen Regelungen (z.B. Angaben zum Vertragspartner) ergeben kann. Mitunter kann es zu einem Vertragsschluss erforderlich sein, dass eine betroffene Person uns personenbezogene Daten zur Verf&uuml;gung stellt, die in der Folge durch uns verarbeitet werden m&uuml;ssen. Die betroffene Person ist beispielsweise verpflichtet, uns personenbezogene Daten bereitzustellen, wenn unser Verein mit ihr einen Vertrag abschlie&szlig;t. Eine Nichtbereitstellung der personenbezogenen Daten h&auml;tte zur Folge, dass der Vertrag mit dem Betroffenen nicht geschlossen werden k&ouml;nnte. Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich der Betroffene an einen unserer Mitarbeiter wenden. Unser Mitarbeiter kl&auml;rt den Betroffenen einzelfallbezogen dar&uuml;ber auf, ob die Bereitstellung der personenbezogenen Daten gesetzlich oder vertraglich vorgeschrieben oder f&uuml;r den Vertragsabschluss erforderlich ist, ob eine Verpflichtung besteht, die personenbezogenen Daten bereitzustellen, und welche Folgen die Nichtbereitstellung der personenbezogenen Daten h&auml;tte.</p>
+
+            <h2 class="h4 mt-4 mb-3">13. Bestehen einer automatisierten Entscheidungsfindung</h2>
+            <p>Als verantwortungsbewusster Verein verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling.</p>
+
+            <p class="text-body-secondary mt-4 fs-sm"><em>Diese Datenschutzerkl&auml;rung wurde durch den Datenschutzerkl&auml;rungs-Generator der DGD Deutsche Gesellschaft f&uuml;r Datenschutz GmbH erstellt, die in Kooperation mit den Medienrechtsanw&auml;lten von WBS-LAW entwickelt wurde.</em></p>
+
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="../assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Germany</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projekte.html">Projekte</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="forschung.html">Forschung</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publikationen.html">Publikationen</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Rechtliches</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Kontakt</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:info@eipcm.org">info@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="kontakt.html">Kontakt aufnehmen</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts -->
+    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="../assets/js/theme.min.js"></script>
+
+    <!-- Swap logo + shrink header on scroll -->
+    <script>
+      (function () {
+        var navbar = document.querySelector('.navbar.fixed-top')
+        var logoLarge = document.querySelector('.navbar-logo-large')
+        var logoSmall = document.querySelector('.navbar-logo-small')
+        if (!navbar || !logoLarge || !logoSmall) return
+
+        var brandLink = navbar.querySelector('.navbar-brand')
+        var observer = new MutationObserver(function () {
+          var stuck = navbar.classList.contains('navbar-stuck')
+          logoLarge.style.opacity = stuck ? '0' : '1'
+          logoSmall.style.opacity = stuck ? '1' : '0'
+          brandLink.style.width = stuck ? '118px' : '140px'
+          brandLink.style.height = stuck ? '40px' : '48px'
+          navbar.style.paddingTop = stuck ? '' : '2.5rem'
+          navbar.style.paddingBottom = stuck ? '' : '2.5rem'
+        })
+        observer.observe(navbar, { attributes: true, attributeFilter: ['class'] })
+      })()
+    </script>
+    <script src="../assets/js/cookie-consent.js"></script>
+  </body>
+</html>

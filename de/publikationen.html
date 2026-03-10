@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO meta tags -->
+    <title>Publikationen - EIPCM</title>
+    <meta name="description" content="EIPCM Publikationen — Begutachtete Artikel, Buchbeiträge und Tagungsbände zu partizipativen Systemen, KI und digitaler Innovation.">
+    <meta name="keywords" content="EIPCM, Publikationen, Forschung, partizipative Systeme, KI, begutachtet, Zeitschriften, Konferenzen">
+    <meta name="author" content="EIPCM">
+
+    <!-- Favicon / App icons -->
+    <link rel="icon" type="image/png" href="../assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/app-icons/icon-180x180.png">
+
+    <!-- Import Google fonts (Titillium Web for headings, Open Sans for body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="../assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <!-- Custom overrides -->
+    <style>
+      /* Body font: Open Sans, Headings: Titillium Web */
+      body { font-family: "Open Sans", sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-family: "Titillium Web", sans-serif !important;
+      }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      /* Footer text color */
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      /* Footer hover color */
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      /* Content link color */
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      /* Keep buttons/inputs unselectable */
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
+    </style>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Laden...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+
+          <!-- Navbar brand (EIPCM Logo — small on subpages) -->
+          <a class="navbar-brand pe-sm-3" href="index.html">
+            <img src="../assets/img/eipcm-logo-small.svg" alt="EIPCM" width="118" height="40">
+          </a>
+
+          <!-- LinkedIn icon -->
+          <a class="nav-link fs-xl order-lg-2 ms-lg-4 p-2 d-none d-lg-inline-flex" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ai-linkedin"></i>
+          </a>
+
+          <!-- Contact button (separate from main nav) -->
+          <a class="btn btn-secondary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex ms-auto ms-lg-3" href="kontakt.html">
+            Kontakt
+          </a>
+
+          <!-- Language switcher -->
+          <span class="order-lg-4 d-none d-sm-inline-flex align-items-center ms-3 fs-sm">
+            <a href="../publications.html" class="text-decoration-none text-muted">EN</a>
+            <span class="mx-1 text-muted">|</span>
+            <strong class="text-nav">DE</strong>
+          </span>
+
+          <!-- Mobile menu toggler (Hamburger) -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Navigation umschalten">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse (Main navigation) -->
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item">
+                <a class="nav-link" href="projekte.html">Projekte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="forschung.html">Forschung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="publikationen.html">Publikationen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="training.html">Training</a>
+              </li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-secondary w-100 mb-1" href="kontakt.html">Kontakt</a>
+            </div>
+            <div class="d-sm-none text-center pb-3">
+              <a href="../publications.html" class="text-decoration-none text-muted">EN</a>
+              <span class="mx-2 text-muted">|</span>
+              <strong class="text-nav">DE</strong>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page header -->
+      <section class="container pt-5 mt-5">
+
+        <div class="row">
+          <!-- Page title -->
+          <div class="col-lg-8">
+            <h1 class="display-4 mb-0">Publikationen</h1>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Publications content -->
+      <section class="container pt-4 pb-5 mb-md-2 mb-lg-3 mb-xl-4">
+        <div class="row pt-xxl-2">
+          <div class="col-lg-9 col-xl-8 pe-lg-4 pe-xl-0">
+
+
+            <!-- Book contributions -->
+            <h2 class="h4 mb-lg-4 pt-3" id="books" style="scroll-margin-top: 6rem;">Buchbeitr&auml;ge</h2>
+            <ul class="fs-sm">
+              <li class="mb-3"><strong>Towards Reflective AI: Needs, Challenges and Directions for Future Research.</strong> Novak, J., Drenska, K., Koroleva, K., Pfahler, L., Marin, L., M&ouml;ller, J., &Ouml;zg&ouml;bek, &Ouml;., Willemsen, M., Dersch, D., Das, E., Larson, M., Morik, K. EIPCM. <a href="https://doi.org/10.5281/zenodo.5345643" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.5345643</a></li>
+              <li class="mb-3"><strong>Citizen engagement and collective intelligence for participatory Digital Social Innovation.</strong> Novak, J., Becker, M., Grey, F., Mondardini, R. In Bonn, A., Haklay, M., Hecker, Bowser, A., Makuch, Z., Vogel, J. (eds.), Citizen Science &ndash; Innovation in Open Science, Society and Policy. UCL Press, October 2018.</li>
+              <li class="mb-3"><strong>Gamified approaches for Water Management Systems: an Overview.</strong> Castelletti, A., Cominola, A., Facchini, A., Giuliani, M., Fraternali, P., Herrera, S., Melenhorst, M., Micheel, I., Novak, J., Pasini, C., Rizzoli, A.E., Rottondi, C. In Water Smart Grids &ndash; A Cyber-Physical Approach. CRC Press, 2017.</li>
+              <li class="mb-3"><strong>Collective Action in Human Computation.</strong> Novak, J. In Michellucci, P. (ed.), Handbook on Human Computation. Springer, 2013.</li>
+              <li class="mb-3"><strong>User-generated content Creation.</strong> Guerrero, C., Novak, J. et al. In European Commission (ed.), User-Centric Media: Future and Challenges in European Research, Whitebook, EU-IST Expert Group on User-Centric Media, October 2007. ISBN 978-92-79-06865-2.</li>
+              <li class="mb-3"><strong>Personalised Access to Media Systems.</strong> Achilleopoulos, N., Novak, J. et al. In European Commission (ed.), User-Centric Media: Future and Challenges in European Research, Whitebook, EU-IST Expert Group on User-Centric Media, October 2007. ISBN 978-92-79-06865-2.</li>
+            </ul>
+
+
+            <!-- Peer-reviewed journal articles -->
+            <h2 class="h4 mb-lg-4 pt-3 pt-md-4 pt-xl-5" id="journals" style="scroll-margin-top: 6rem;">Begutachtete Artikel in wissenschaftlichen Zeitschriften</h2>
+            <ul class="fs-sm">
+              <li class="mb-3"><strong>How to Engage with Sustainability Issues We Rarely Experience? A Gamification Model for Collective Awareness Platforms in Water-Related Sustainability.</strong> Koroleva, K., Novak, J. Sustainability 12 (2), 712, 2020.</li>
+              <li class="mb-3"><strong>Designing an integrated socio-technical behaviour change system for energy saving.</strong> Koroleva, K., Melenhorst, M., Novak, J., Gonzalez, S.L.H., Fraternali, P., Rizzoli, A.E. Energy Inform 2, 30 (2019). <a href="https://eipcm.org/project/encompass/" target="_blank" rel="noopener">enCOMPASS project&hellip;</a></li>
+              <li class="mb-3"><strong>Visualizing and gamifying consumption data for resource saving: challenges, lessons learnt and a research agenda for the future.</strong> Fraternali, P., Cellina, F., Gonzales, S.L.H, Melenhorst, M., Novak, J., Pasini, C., Rottondi, C., Rizzoli, A.E. Energy Inform 2, 22 (2019). <a href="https://eipcm.org/project/encompass/" target="_blank" rel="noopener">enCOMPASS project&hellip;</a></li>
+              <li class="mb-3"><strong>Developing a Collective Awareness Platform for Urban Sustainability Challenges: Case Study of the POWER Project.</strong> Becker, M., Novak, J., Drenska, K., Fernadez, T. European Journal of Sustainable Development, 8(4), 214. <a href="https://eipcm.org/project/power/" target="_blank" rel="noopener">POWER project&hellip;</a></li>
+              <li class="mb-3"><strong>Integrating behavioural change and gamified incentive modelling for stimulating water saving.</strong> Novak, J., Melenhorst M., Micheel, I., Pasini, C., Fraternali, P., Rizzoli, A.E. Environmental Modelling and Software, Vol. 102, Apr 2018, pp. 120&ndash;137, ISSN 1364-8152. <a href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">SmartH2O project&hellip;</a></li>
+              <li class="mb-3"><strong>A Survey on the Design of Gamified Systems for Energy and Water Sustainability.</strong> Albertarelli, S., Fraternali, P., Herrera, S., Melenhorst, M., Novak, J., Pasini, C., Rizzoli, A.E., Rottondi, C. Games, 2018, 9(3), 38. <a href="https://eipcm.org/project/encompass/" target="_blank" rel="noopener">enCOMPASS project&hellip;</a></li>
+              <li class="mb-3"><strong>SmartH2O, demonstrating the impact of gamification technologies for saving water.</strong> Rizzoli, A.E., Castelletti, A., Fraternali, P., Novak, J. Demo Abstract. Computer Science Research and Development (2018) 33: 275, Springer. <a href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">SmartH2O project&hellip;</a></li>
+              <li class="mb-3"><strong>Online Platform as a Tool to Support Postgraduate Training in General Practice &ndash; A Case Report.</strong> Dini, L., Galanski, C., D&ouml;pfmer, S., Gehrke-Beck, S., Bayer, G., Boeckle, M., Micheel, I., Novak, J., Heintze, C. GMS Journal for Medical Education, 34(5), Doc59, November 2017.</li>
+              <li class="mb-3"><strong>Nutzerverhalten auf der haus&auml;rztlichen Online-Weiterbildungsplattform &bdquo;KOLEGEA&ldquo;.</strong> Bayer, G., Galanski, C., Dini, L., Micheel, I., Novak, J., Heintze, C. ZFA &ndash; Zeitschrift f&uuml;r Allgemeinmedizin, 93 (4), April 2017.</li>
+              <li class="mb-3"><strong>A Crowd-powered System for Fashion Similarity Search.</strong> Semertzidis, T., Novak, J., Lazaridis, M., Melenhorst, M., Micheel, I., Michalopoulos, D., B&ouml;ckle, M., Strintzis, M. G., Daras, P. ACM Transactions on Intelligent Systems and Technology, 7, 4, Article 46, April 2016. <a href="https://eipcm.org/project/cubrik/" target="_blank" rel="noopener">CUbRIK project&hellip;</a></li>
+              <li class="mb-3"><strong>Entwicklung mobiler Anwendungen f&uuml;r nutzergeneriertes Wissen in der &auml;rztlichen Weiterbildung.</strong> Novak, J., Schr&ouml;der, S., B&ouml;ckle, M., Verheyen, P., Ziebarth, S., Hoppe, U., K&ouml;tteritzsch, A., Ziegler, J., Heintze, C. iCom &ndash; Zeitschrift f&uuml;r interaktive und kooperative Medien, Oldenbourg Wissenschaftsverlag GmbH, M&uuml;nchen, 2013: 10&ndash;22. <a href="https://eipcm.org/project/kolegea/" target="_blank" rel="noopener">KOLEGEA project&hellip;</a></li>
+              <li class="mb-3"><strong>Designing for reintermediation in the brick-and-mortar world: Towards the travel agency of the future.</strong> Novak, J., Schwabe, G. Electronic Markets Journal, Issue 1/2013, Springer, March 2009.</li>
+            </ul>
+
+
+            <!-- Conference proceedings -->
+            <h2 class="h4 mb-lg-4 pt-3 pt-md-4 pt-xl-5" id="conferences" style="scroll-margin-top: 6rem;">Begutachtete Artikel in Tagungsb&auml;nden wissenschaftlicher Konferenzen (Auswahl)</h2>
+            <ul class="fs-sm">
+              <li class="mb-3"><strong>Stimulating energy-saving behaviour through eco-feedback, adaptive gamification and personalized recommendations.</strong> Novak, J., Melenhorst, M., Micheel, I., Fraternali, P., Pasini, C., Herrera, S., Hidasi, B. Proceedings of BEHAVE 2018 &ndash; 5th European Conference on Behaviour and Energy Efficiency, Zurich, September 2018. <a href="https://eipcm.org/project/encompass/" target="_blank" rel="noopener">enCOMPASS project&hellip;</a></li>
+              <li class="mb-3"><strong>Metaphorical Visualizations of Energy Saving Impact for Behavioural Change: A Goal-Framing Approach and Results from an Online Crowd Evaluation.</strong> Melenhorst, M., Koroleva, K., Novak, J. Proceedings of BEHAVE 2018, Zurich, September 2018. <a href="https://eipcm.org/project/encompass/" target="_blank" rel="noopener">enCOMPASS project&hellip;</a></li>
+              <li class="mb-3"><strong>A Design Framework for Adaptive Gamification Applications.</strong> B&ouml;ckle, M., Micheel, I., Bick, M., Novak, J. Proceedings of the 51st Hawaii International Conference on System Sciences (HICSS), Hawaii, USA, January 2018.</li>
+              <li class="mb-3"><strong>enCOMPASS &ndash; an Integrative Approach to Behavioural Change for Energy Saving.</strong> Fraternali, P., Herrera, S., Novak, J., Melenhorst, M., Tzovaras, D., Kinidis, S., Rizzoli, A.E., Celina, F. Proc. of Global Internet of Things Summit (GIoTS) 2017, Geneva, June 2017. <a href="https://eipcm.org/project/encompass/" target="_blank" rel="noopener">enCOMPASS project&hellip;</a></li>
+              <li class="mb-3"><strong>Towards Adaptive Gamification: A Synthesis of Current Developments.</strong> B&ouml;ckle, M., Novak, J., Bick, M. Proceedings of the 25th European Conference on Information Systems (ECIS), Guimar&atilde;es, Portugal, June 2017.</li>
+              <li class="mb-3"><strong>Behaviour change and incentive modelling for water saving: first experiences from the SmartH2O project.</strong> Novak, J., Melenhorst, M., Micheel, I., Pasini, C., Fraternali, P., Rizzoli, A.E. Proceedings of the 8th International Congress on Environmental Modelling and Software &ndash; iEMSs 2016, Toulouse, France, July 2016. <a href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">SmartH2O project&hellip;</a></li>
+              <li class="mb-3"><strong>Behavioural role analysis for multi-faceted communication campaigns in Twitter.</strong> Lazaridou, P., Ntalla, A., Novak, J. Proceedings of the 8th ACM Conference on Web Science (WebSci &rsquo;16), ACM, 2016. <a href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">SmartH2O project&hellip;</a></li>
+              <li class="mb-3"><strong>Bridging the Utilitarian-Hedonic Divide in Crowdsourcing Applications.</strong> Melenhorst, M., Novak, J., Micheel, I., Larson, M., Boeckle, M. Proc. of CrowdMM &rsquo;15 at ACM Multimedia 2015, Brisbane, Australia, October 2015. <a href="https://eipcm.org/project/cubrik/" target="_blank" rel="noopener">CUbRIK project&hellip;</a></li>
+              <li class="mb-3"><strong>Visualizing &amp; Gamifying Water &amp; Energy Consumption for Behavior Change.</strong> Micheel, I., Novak, J., Fraternali, P., Baroffio, G., Castelletti, A., Rizzoli, A.E. Proc. of Workshop FSEA 2015 at Interact 2015, Bamberg, Germany, September 2015. <a href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">SmartH2O project&hellip;</a></li>
+              <li class="mb-3"><strong>Integrating real and digital games with data analytics for water consumption behavioral change: a demo.</strong> Fraternali, P., Baroffio, G., Galli, L., Micheel, I., Novak, J., Rizzoli, A.E. Proc. of IEEE UCC 2015, Limassol, Cyprus, December 2015. <a href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">SmartH2O project&hellip;</a></li>
+              <li class="mb-3"><strong>The SmartH2O project and the role of social computing in promoting efficient residential water use: a first analysis.</strong> Rizzoli, A.E., Castelletti, A., Cominola, A., Fraternali, P., Diniz dos Santos, A., Storni, B., Wissmann-Alves, R., Bertocchi, M., Novak, J., Micheel, I. Proceedings of the 7th International Congress on Environmental Modelling and Software, San Diego, USA, June 2014. <a href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">SmartH2O project&hellip;</a></li>
+              <li class="mb-3"><strong>Smart metering, water pricing and social media to stimulate residential water efficiency: opportunities for the SmartH2O project.</strong> Harou, J.J., Garrone, P., Rizzoli, A.R.E., Maziotis, A., Castelletti, A., Fraternali, P., Novak, J., Wissmann-Alves, R., Ceschi, P.A. Proceedings of 16th Conference on Water Distribution System Analysis, WDSA 2014, Bari, Italy, 2014. <a href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">SmartH2O project&hellip;</a></li>
+              <li class="mb-3"><strong>histoGraph as a Demonstrator for Domain Specific Challenges to crowdsourcing.</strong> Wieneke, L., During, M., Croce, V., Novak, J. Proceedings of SoHuman 2014 at SocInfo 2014, Barcelona, Spain, 2014. <a href="https://eipcm.org/project/histograph/" target="_blank" rel="noopener">histoGraph&hellip;</a></li>
+              <li class="mb-3"><strong>histoGraph &ndash; A Visualization Tool for Collaborative Analysis of Historical Social Networks from Multimedia Collections.</strong> Novak, J., Wieneke, L., D&uuml;ring, M., Micheel, I., Melenhorst, M., Garcia Mor&oacute;n, J., Pasini, C., Tagliasacchi, M., Fraternali, P. Proceedings of 18th International Conference Information Visualisation (IV) 2014, Paris, France. <a href="https://eipcm.org/project/histograph/" target="_blank" rel="noopener">histoGraph&hellip;</a></li>
+              <li class="mb-3"><strong>MediMatrix: An Interface for Visualizing Learner-Generated Patient Case Collections in Postgraduate Medical Training.</strong> Schr&ouml;der, S., Novak, J. Proceedings of 18th International Conference Information Visualisation (IV) 2014, Paris, France. <a href="https://eipcm.org/project/kolegea/" target="_blank" rel="noopener">KOLEGEA project&hellip;</a></li>
+              <li class="mb-3"><strong>Building the social graph of the History of European Integration.</strong> Wieneke, L., Sillaume, G., D&uuml;ring, M., Pasini, C., Fraternali, P., Tagliasacchi, M., Melenhorst, M., Novak, J., Micheel, I., Harloff, E., Garcia Moron, J., Lallemand, C., Vincenzo, C., Lazzaro, M., Nucci, F. Short Paper. DH 2014 &ndash; International Conference on Digital Humanities, Lausanne, July 2014. <a href="https://eipcm.org/project/histograph/" target="_blank" rel="noopener">histoGraph&hellip;</a></li>
+              <li class="mb-3"><strong>Building social graphs from images through expert-based crowdsourcing.</strong> Dionisio, M., Fraternali, P., Harloff, E., Martinenghi, D., Micheel, I., Novak, J., Pasini, C., Tagliasacchi, M., Zagorac, S. In Novak, J., Fraternali, P., Daras, P., Chrons, O., Jaimes, A., Klein, M. (eds.), Proceedings of SoHuman 2013 at ACM WebScience 2013, Paris, 2013. <a href="https://eipcm.org/project/histograph/" target="_blank" rel="noopener">histoGraph&hellip;</a></li>
+              <li class="mb-3"><strong>Collaborative Visual Annotations For Knowledge Exchange in Practical Medical Training.</strong> B&ouml;ckle, M., Schr&ouml;der, S., Novak, J. Proc. of ECTEL meets ECSCW 2013, Paphos, Cyprus, September 2013. <a href="https://eipcm.org/project/kolegea/" target="_blank" rel="noopener">KOLEGEA project&hellip;</a></li>
+              <li class="mb-3"><strong>Combining human and machine computation for the digital humanities.</strong> Wieneke, L., Sillaume, G., Lallemand, C., Novak, J., Micheel, I., Garcia Mor&oacute;n, J., Lazzaro, M., Croce, V. IEEE MMSP 2013, Pula, Italy. <a href="https://eipcm.org/project/histograph/" target="_blank" rel="noopener">histoGraph&hellip;</a></li>
+              <li class="mb-3"><strong>Towards a User-centered Ubiquitous Customer Feedback Elicitation Framework.</strong> Wieck, E., Novak, J. Proc. of ICEIS 2012 (3) 2012: 269&ndash;272.</li>
+              <li class="mb-3"><strong>Mobile Anwendungen f&uuml;r Medizin und Gesundheit.</strong> Novak, J., Ziegler, J., Hoppe, U., Hulzinger, A., Heintze, C., B&ouml;ckle, M. Proc. of Mensch &amp; Computer, Workshopband 2012: 227&ndash;230. <a href="https://eipcm.org/project/kolegea/" target="_blank" rel="noopener">KOLEGEA project&hellip;</a></li>
+              <li class="mb-3"><strong>Entwicklung mobiler Anwendungen f&uuml;r situatives Wissen in der Medizin.</strong> Novak, J., B&ouml;ckle, M., Ziebarth, S. Proc. of Mensch &amp; Computer, Workshopband 2012: 247&ndash;260. <a href="https://eipcm.org/project/kolegea/" target="_blank" rel="noopener">KOLEGEA project&hellip;</a></li>
+              <li class="mb-3"><strong>A Draw-and-Guess Game to Segment Images.</strong> Galli, L., Fraternali, P., Martinenghi, D., Tagliasacchi, M., Novak, J. SocialCom/PASSAT 2012: 914&ndash;917. <a href="https://eipcm.org/project/cubrik/" target="_blank" rel="noopener">CUbRIK project&hellip;</a></li>
+              <li class="mb-3"><strong>The CUBRIK project: human-enhanced time-aware multimedia search.</strong> Fraternali, P., Tagliasacchi, M. et al., Novak, J., Sillaume, G. WWW (Companion Volume) 2012: 259&ndash;262. <a href="https://eipcm.org/project/cubrik/" target="_blank" rel="noopener">CUbRIK project&hellip;</a></li>
+              <li class="mb-3"><strong>Designing Visual Systems for Social Data Analysis in Open Government Applications.</strong> Novak, J., Preu&szlig;e, S. Proc. Workshop at INTERACT 2011, Lissabon, WS-CEUR, Vol. 817, December 2011. <a href="https://eipcm.org/project/open-city-cockpit/" target="_blank" rel="noopener">Open City Cockpit&hellip;</a></li>
+              <li class="mb-3"><strong>When Joy Matters: The Importance of Hedonic Stimulation in Collocated Collaboration with Large-Displays.</strong> Novak, J., Schmidt, S. Proc. INTERACT 2009, 12th IFIP Conference on Human-Computer Interaction, August 2009.</li>
+              <li class="mb-3"><strong>Mine, Yours&hellip;Ours? Designing for Principal-Agent Collaboration in Interactive Value Creation.</strong> Novak, J. Proc. of Wirtschaftsinformatik 2009, Vienna, February 2009.</li>
+              <li class="mb-3"><strong>Kooperative Medienumgebungen f&uuml;r das Reiseb&uuml;ro der Zukunft.</strong> Novak, J., Schmidt, S., Aggeler, M., Schwabe, G. Proc. der Mensch &amp; Computer 2008, L&uuml;beck, September 2008.</li>
+              <li class="mb-3"><strong>Designing Large-Display Workspaces for Cooperative Travel Consultancy.</strong> Novak, J., Aggeler, M., Schwabe, G. Proc. of ACM CHI 2008, Extended Abstracts, Florence, 2008. ACM Press.</li>
+              <li class="mb-3"><strong>The Mobile Campfire: A New User Paradigm for Mobile Social Web Scenarios.</strong> Aschoff, R., Novak, J. Proc. of IEEE Human-System Interaction Conference, Krakow, May 2008. IEEE Press.</li>
+              <li class="mb-3"><strong>The Mobile Forum: Real-Time Information Exchange in Mobile SMS Communities.</strong> Aschoff, M., Novak, J. Proc. of ACM CHI 2008, Extended Abstracts, 2008.</li>
+              <li class="mb-3"><strong>Designing the Tourist Agency of the Future.</strong> Schwabe, G., Novak, J., Aggeler, M. 21st Bled eConference on eCollaboration, Bled, June 2008.</li>
+              <li class="mb-3"><strong>Challenges and Opportunities for Visual Exploratory Search in User-generated Media Content Collections.</strong> Novak, J. ACM CHI 2007 Workshop on Explorative Search Interfaces, May 2007.</li>
+            </ul>
+
+
+            <!-- Other contributions -->
+            <h2 class="h4 mb-lg-4 pt-3 pt-md-4 pt-xl-5" id="other" style="scroll-margin-top: 6rem;">Weitere Beitr&auml;ge in B&uuml;chern, Fachzeitschriften und Tagungsb&auml;nden</h2>
+            <ul class="fs-sm">
+              <li class="mb-3"><strong>Social Media als Katalysator f&uuml;r Innovation.</strong> Novak, J., Hosenen, A. Swiss IT Magazine, Sonderheft Social Media, Mai 2011.</li>
+              <li class="mb-3"><strong>User-Centric Media and Next-Generation Media Ecosystems.</strong> Novak, J. Proc. of NMI 2007, Tagung Neue Medien der Informationsgesellschaft, Berlin-Brandenburgische Akademie der Wissenschaften, Alcatel Stiftungs-Verbundkolleg Berlin, June 27&ndash;29, 2007.</li>
+            </ul>
+
+          </div>
+
+
+          <!-- Sidebar -->
+          <aside class="col-lg-3 offset-xl-1 pt-4 pt-lg-0" style="margin-top: -7rem;">
+            <div class="position-sticky top-0 mt-2 mt-md-3 mt-lg-0" style="padding-top: 7rem;">
+
+              <!-- Quick links -->
+              <h4 class="mb-4">Auf dieser Seite:</h4>
+              <ul class="list-unstyled mb-0">
+                <li class="border-bottom pb-3 mb-3">
+                  <span class="h6 mb-0">
+                    <a href="#books">Buchbeitr&auml;ge</a>
+                  </span>
+                </li>
+                <li class="border-bottom pb-3 mb-3">
+                  <span class="h6 mb-0">
+                    <a href="#journals">Zeitschriftenartikel</a>
+                  </span>
+                </li>
+                <li class="border-bottom pb-3 mb-3">
+                  <span class="h6 mb-0">
+                    <a href="#conferences">Konferenzbeitr&auml;ge</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="h6 mb-0">
+                    <a href="#other">Weitere Beitr&auml;ge</a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="../assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Deutschland</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projekte.html">Projekte</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="forschung.html">Forschung</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publikationen.html">Publikationen</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Rechtliches</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Kontakt</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:info@eipcm.org">info@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="kontakt.html">Kontakt aufnehmen</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Zur&uuml;ck nach oben">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="../assets/js/theme.min.js"></script>
+    <script src="../assets/js/cookie-consent.js"></script>
+  </body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="light" style="font-size: 15px;">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO meta tags -->
+    <title>AI-CODE - EIPCM</title>
+    <meta name="description" content="AI-CODE — Verantwortungsvoller KI-Einsatz im Journalismus. Journalist:innen dabei unterstützen, große Sprachmodelle zu verstehen, Grenzen zu erkennen und vertrauenswürdige Inhalte zu produzieren.">
+    <meta name="keywords" content="EIPCM, AI-CODE, KI, Journalismus, verantwortungsvolle KI, große Sprachmodelle, Medienkompetenz, vertrauenswürdige Inhalte">
+    <meta name="author" content="EIPCM">
+
+    <!-- Favicon / App icons -->
+    <link rel="icon" type="image/png" href="../assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/app-icons/icon-180x180.png">
+
+    <!-- Import Google fonts (Titillium Web for headings, Open Sans for body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/aos/dist/aos.css">
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="../assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <!-- Custom overrides -->
+    <style>
+      /* Body font: Open Sans, Headings: Titillium Web */
+      body { font-family: "Open Sans", sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-family: "Titillium Web", sans-serif !important;
+      }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      /* Footer text color */
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      /* Footer hover color */
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      /* Content link color */
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      /* Keep buttons/inputs unselectable */
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
+    </style>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Laden...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+
+          <!-- Navbar brand (EIPCM Logo — small on subpages) -->
+          <a class="navbar-brand pe-sm-3" href="index.html">
+            <img src="../assets/img/eipcm-logo-small.svg" alt="EIPCM" width="118" height="40">
+          </a>
+
+          <!-- LinkedIn icon -->
+          <a class="nav-link fs-xl order-lg-2 ms-lg-4 p-2 d-none d-lg-inline-flex" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ai-linkedin"></i>
+          </a>
+
+          <!-- Contact button (separate from main nav) -->
+          <a class="btn btn-secondary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex ms-auto ms-lg-3" href="kontakt.html">
+            Kontakt
+          </a>
+
+          <!-- Language switcher -->
+          <span class="order-lg-4 d-none d-sm-inline-flex align-items-center ms-3 fs-sm">
+            <a href="../project-ai-code.html" class="text-decoration-none text-muted">EN</a>
+            <span class="mx-1 text-muted">|</span>
+            <strong class="text-nav">DE</strong>
+          </span>
+
+          <!-- Mobile menu toggler (Hamburger) -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse (Main navigation) -->
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item">
+                <a class="nav-link" href="projekte.html">Projekte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="forschung.html">Forschung</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="publikationen.html">Publikationen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="training.html">Training</a>
+              </li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-secondary w-100 mb-1" href="kontakt.html">Kontakt</a>
+            </div>
+            <div class="d-sm-none text-center pb-3">
+              <a href="../project-ai-code.html" class="text-decoration-none text-muted">EN</a>
+              <span class="mx-2 text-muted">|</span>
+              <strong class="text-nav">DE</strong>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="position-relative pt-5 mb-5">
+        <div class="bg-secondary position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block"></div>
+        <div class="bg-secondary position-absolute top-0 end-0 w-100 h-100 d-lg-none"></div>
+        <div class="container position-relative z-2 py-5 pb-lg-0">
+
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="pt-lg-2 pb-1 breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Startseite</a></li>
+              <li class="breadcrumb-item"><a href="projekte.html">Projekte</a></li>
+              <li class="breadcrumb-item active" aria-current="page">AI-CODE</li>
+            </ol>
+          </nav>
+
+          <div class="d-lg-flex align-items-center pt-3 pb-xxl-5">
+            <!-- Hero image -->
+            <div class="order-lg-2 me-auto me-lg-0 ms-auto rounded-5 overflow-hidden" style="width: 480px; max-width: 100%;">
+              <picture>
+                <source srcset="../assets/img/eipcm/ai-code.webp" type="image/webp">
+                <img src="../assets/img/eipcm/ai-code.png" alt="AI-CODE" class="d-block w-100">
+              </picture>
+            </div>
+            <div class="order-lg-1 text-center text-lg-start pe-lg-4 py-4 py-md-5">
+              <h1 class="display-3 pb-3 pb-lg-4">AI-CODE &mdash; Verantwortungsvolle KI im Journalismus</h1>
+              <p class="fs-lg mx-auto mx-lg-0 mb-0" style="max-width: 530px;">Eine praxisnahe Untersuchung des verantwortungsvollen KI-Einsatzes im Journalismus &mdash; Journalist:innen dabei unterstützen zu verstehen, wie große Sprachmodelle funktionieren, ihre Grenzen zu erkennen und sie für eine vertrauenswürdigere Inhaltsproduktion einzusetzen.</p>
+            </div>
+          </div>
+
+          <!-- Project links -->
+          <ul class="nav justify-content-center justify-content-lg-start mx-n2 pt-lg-5 mb-0">
+            <li class="nav-item me-3">
+              <span class="nav-link p-2 text-body-secondary">Gefördert von EU / Erasmus+</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link p-2 text-body-secondary">seit 2023</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- Project showcase -->
+      <section class="container pt-lg-2 pt-xl-4 pt-xxl-5">
+        <div class="row py-sm-3 py-md-4 py-lg-5">
+
+          <!-- Sticky sidebar with brief -->
+          <aside class="col-md-3 col-lg-2" style="margin-top: -125px;">
+            <div class="d-flex d-md-block flex-wrap position-sticky top-0" style="padding-top: 130px;">
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Partner</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">HS Stralsund</li>
+                  <li class="d-block py-1">EIPCM</li>
+                  <li class="d-block py-1">APA Austria</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Bereich</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">KI &amp; Gesellschaft</li>
+                  <li class="d-block py-1">Journalismus</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">EIPCM-Rolle</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Forschung</li>
+                  <li class="d-block py-1">Trainingsdesign</li>
+                  <li class="d-block py-1">Evaluation</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Laufzeit</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">seit 2023</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Description -->
+          <div class="col-md-9 offset-lg-1">
+            <div class="ps-md-4 ps-lg-0">
+
+              <!-- Überblick -->
+              <div class="border-bottom pb-3 pb-sm-4 pb-lg-5 mb-4">
+                <p class="text-dark lead mb-md-2 mb-lg-3 mb-xl-4">AI-CODE untersucht den verantwortungsvollen Einsatz von KI im Journalismus. Das Projekt entwickelt Kompetenzrahmen, Schulungsmaterialien und praxisnahe Leitlinien, die Journalist:innen und Medienschaffenden ermöglichen, das Potenzial großer Sprachmodelle zu nutzen und dabei redaktionelle Integrität und öffentliches Vertrauen zu wahren.</p>
+              </div>
+
+              <!-- Problem & Kontext -->
+              <h2 class="h1 pt-2 pt-sm-3 pt-md-4 pt-lg-5 pb-2">Problem &amp; Kontext</h2>
+              <p class="fs-lg">Die rasante Verbreitung generativer KI in Redaktionen wirft grundlegende Fragen zu Qualität, Vertrauen und Ethik auf:</p>
+              <ul class="fs-lg mb-4">
+                <li class="mb-2"><strong>Genauigkeitsrisiken:</strong> Große Sprachmodelle können plausible, aber faktisch falsche Inhalte erzeugen, was eine ernsthafte Bedrohung für die journalistische Glaubwürdigkeit darstellt.</li>
+                <li class="mb-2"><strong>Mangelnde Transparenz:</strong> Das Publikum weiß oft nicht, wann KI-Tools bei der Inhaltsproduktion eingesetzt werden, was einen informierten Medienkonsum untergräbt.</li>
+                <li class="mb-2"><strong>Kompetenzlücke:</strong> Vielen Journalist:innen fehlt das technische Verständnis, um KI-Ergebnisse kritisch zu bewerten oder diese Werkzeuge effektiv einzusetzen.</li>
+              </ul>
+
+              <!-- Zielgruppe -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Zielgruppe &amp; Annahmen</h2>
+              <ul class="fs-lg mb-3">
+                <li class="mb-2"><strong>Primäre Gruppe:</strong> Professionelle Journalist:innen und Redakteur:innen in Print-, Rundfunk- und digitalen Medien.</li>
+                <li class="mb-2"><strong>Sekundäre Gruppe:</strong> Journalismusausbilder:innen, Medienorganisationen und Presseagenturen, die KI-Richtlinien entwickeln möchten.</li>
+              </ul>
+              <p class="fs-lg mb-4"><strong>Zentrale Annahmen:</strong> Journalist:innen, die verstehen, wie KI-Modelle funktionieren, sind besser in der Lage, diese verantwortungsvoll einzusetzen. Praxisnahes, szenariobasiertes Training ist wirksamer als abstrakte Richtlinien allein.</p>
+
+              <!-- Ziele -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Ziele &amp; Erfolgskriterien</h2>
+              <ul class="fs-lg mb-4">
+                <li class="mb-2"><strong>Ziel 1:</strong> Entwicklung eines umfassenden KI-Kompetenzrahmens, der auf den Journalismusberuf zugeschnitten ist.</li>
+                <li class="mb-2"><strong>Ziel 2:</strong> Erstellung praxisnaher Schulungsmodule, die Journalist:innen in ihre täglichen Arbeitsabläufe integrieren können.</li>
+                <li class="mb-2"><strong>Ziel 3:</strong> Etablierung von Best-Practice-Leitlinien für den transparenten und ethischen KI-Einsatz in Redaktionen.</li>
+                <li class="mb-2"><strong>Erfolgskriterien:</strong> Übernahme durch mindestens 3 Partner-Medienorganisationen und messbare Verbesserung der KI-Kompetenz bei den Teilnehmenden.</li>
+              </ul>
+
+              <!-- Forschung & Erkenntnisse -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Forschung &amp; Erkenntnisse</h2>
+              <ul class="fs-lg mb-4">
+                <li class="mb-2"><strong>Vertrauensparadox:</strong> Journalist:innen, die mit KI-Tools experimentieren, entwickeln ein differenzierteres Verständnis sowohl ihrer Möglichkeiten als auch ihrer Grenzen.</li>
+                <li class="mb-2"><strong>Workflow-Integration:</strong> KI-Tools sind am wirksamsten, wenn sie in bestehende redaktionelle Prozesse eingebettet werden, anstatt als eigenständige Lösungen behandelt zu werden.</li>
+                <li class="mb-2"><strong>Europäische Perspektive:</strong> Die regulatorische Landschaft in Europa (KI-Verordnung) schafft einzigartige Anforderungen für den KI-Einsatz in Medien, die sich von anderen Regionen unterscheiden.</li>
+              </ul>
+
+              <!-- Hypothesen & Entscheidungen -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Hypothesen &amp; Entscheidungen</h2>
+              <ul class="fs-lg mb-4">
+                <li class="mb-2"><strong>Hypothese:</strong> Praktisches Experimentieren mit KI-Tools in Kombination mit strukturierter Reflexion führt zu einer verantwortungsvolleren Nutzung als rein richtlinienbasierte Ansätze.</li>
+                <li class="mb-2"><strong>Entscheidung:</strong> Entwicklung szenariobasierter Schulungsmodule zu den Anwendungsfällen Faktenprüfung, Inhaltserstellung und Publikumsinteraktion.</li>
+                <li class="mb-2"><strong>Entscheidung:</strong> Erstellung eines offenen Kompetenzrahmens, der von verschiedenen Medienorganisationen in ganz Europa angepasst werden kann.</li>
+              </ul>
+
+              <!-- Lösung -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Lösung</h2>
+              <p class="fs-lg mb-3">Das AI-CODE-Projekt liefert mehrere miteinander verknüpfte Ergebnisse:</p>
+              <ul class="fs-lg mb-0">
+                <li class="mb-2"><strong>KI-Kompetenzrahmen:</strong> Ein strukturiertes Modell, das die Kenntnisse, Fähigkeiten und Haltungen definiert, die Journalist:innen für den verantwortungsvollen KI-Einsatz benötigen.</li>
+                <li class="mb-2"><strong>Schulungscurriculum:</strong> Modulare Workshop-Formate von halbtägigen Einführungen bis zu mehrtägigen Vertiefungen zu Prompt Engineering, Faktenprüfung von KI-Ergebnissen und ethischen Aspekten.</li>
+                <li class="mb-2"><strong>Best-Practice-Leitlinien:</strong> Praktische Empfehlungen für KI-Richtlinien in Redaktionen, einschließlich Transparenzkennzeichnung und Qualitätssicherungsprozessen.</li>
+                <li class="mb-2"><strong>Fallstudiensammlung:</strong> Praxisbeispiele für die verantwortungsvolle KI-Integration aus Partner-Redaktionen in ganz Europa.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Images -->
+        <div class="row py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
+          <div class="col-sm-7 mb-4 mb-sm-0">
+            <div class="rounded-5 overflow-hidden bg-secondary" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+              <picture>
+                <source srcset="../assets/img/eipcm/pp1-10.webp" type="image/webp">
+                <img src="../assets/img/eipcm/pp1-10.png" alt="AI-CODE Prompt Playground" class="d-block w-100">
+              </picture>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="rounded-5 overflow-hidden bg-secondary h-100" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200" data-aos-delay="150">
+              <picture>
+                <source srcset="../assets/img/eipcm/m1-40.webp" type="image/webp">
+                <img src="../assets/img/eipcm/m1-40.png" alt="AI-CODE Geführte Simulation" class="d-block w-100 h-100" style="object-fit: cover;">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testing / Validierung -->
+        <div class="row pt-sm-3 pt-md-4 pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+          <div class="col-md-7 col-xl-6 mb-4 mb-md-0">
+            <h2 class="h1 pb-2">Erprobung &amp; Validierung</h2>
+            <p class="fs-lg mb-0">Die AI-CODE-Schulungsmodule wurden mit Journalist:innen in mehreren europäischen Ländern erprobt. Das Feedback aus den ersten Workshops half dabei, sowohl Inhalte als auch Vermittlungsmethoden zu verfeinern und sicherzustellen, dass die Materialien die realen Herausforderungen in zeitgenössischen Redaktionen adressieren.</p>
+          </div>
+          <div class="col-md-5 offset-xl-1">
+            <div class="row row-cols-2 gx-3 gx-sm-4">
+              <div class="col">
+                <div class="h2 display-2 mb-1">120+</div>
+                <p class="fs-sm mb-0">Journalist:innen geschult</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">5</div>
+                <p class="fs-sm mb-0">Europäische Länder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ergebnisse -->
+        <div class="row pt-1 pt-sm-3 pt-md-4 pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8 pb-1 pb-sm-3 pb-md-4">
+            <h2 class="h1 pb-sm-2 pb-lg-3">Ergebnisse &amp; Wirkung</h2>
+            <p class="fs-lg">Das Projekt hat greifbare Ergebnisse für die Journalismus-Community hervorgebracht:</p>
+            <div class="row row-cols-3 pt-2 pt-sm-3 pt-md-4 pt-xl-5 my-3">
+              <div class="col">
+                <div class="h2 display-2 mb-1">92%</div>
+                <p class="fs-sm mb-0">Fanden die Schulung direkt auf ihre Arbeit anwendbar</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">85%</div>
+                <p class="fs-sm mb-0">Berichteten über gesteigertes Vertrauen bei der Bewertung von KI-Ergebnissen</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">3</div>
+                <p class="fs-sm mb-0">Partner-Redaktionen übernahmen KI-Richtlinien</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 pt-4">
+            <h3 class="h4 pb-2">Erwartete Wirkung</h3>
+            <ul class="fs-lg mb-4">
+              <li class="mb-2"><strong>Medienqualität:</strong> Höhere Standards für die KI-gestützte Inhaltsproduktion, die die Verbreitung von Fehlinformationen reduzieren.</li>
+              <li class="mb-2"><strong>Öffentliches Vertrauen:</strong> Mehr Transparenz darüber, wie KI in Redaktionen eingesetzt wird, stärkt das Vertrauen des Publikums.</li>
+              <li class="mb-2"><strong>Branchenstandards:</strong> Beitrag zur Entwicklung europaweiter Leitlinien für KI im Journalismus.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Zentrale Erkenntnisse -->
+        <div class="row pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8">
+            <h2 class="h1 pb-sm-2 pb-lg-3">Zentrale Erkenntnisse</h2>
+            <ul class="fs-lg mb-0">
+              <li class="mb-3"><strong>Kontext ist entscheidend:</strong> KI-Tools funktionieren je nach Journalismus-Genre sehr unterschiedlich &mdash; was für Sportberichterstattung funktioniert, kann beim investigativen Journalismus versagen.</li>
+              <li class="mb-3"><strong>Menschliche Aufsicht bleibt unverzichtbar:</strong> Selbst die fortschrittlichsten KI-Tools erfordern redaktionelles Urteilsvermögen und Faktenprüfung in jeder Phase.</li>
+              <li class="mb-3"><strong>Zusammenarbeit beschleunigt die Einführung:</strong> Der redaktionsübergreifende Wissensaustausch erwies sich als wirksamer als isolierte Schulungsmaßnahmen.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Back to projects -->
+      <section class="container pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+        <div class="border-top pt-4 pt-sm-5">
+          <a class="btn btn-lg btn-outline-primary" href="projekte.html">
+            <i class="ai-arrow-left me-2"></i>
+            Zurück zu allen Projekten
+          </a>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="../assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Germany</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projekte.html">Projekte</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="forschung.html">Forschung</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publikationen.html">Publikationen</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Rechtliches</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Kontakt</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:info@eipcm.org">info@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="kontakt.html">Kontakt aufnehmen</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="../assets/vendor/aos/dist/aos.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="../assets/js/theme.min.js"></script>
+    <script src="../assets/js/cookie-consent.js"></script>
+  </body>
+</html>
