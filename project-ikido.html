@@ -38,6 +38,26 @@
       h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
         font-family: "Titillium Web", sans-serif !important;
       }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
     </style>
 
     <!-- Page loading styles -->
@@ -231,8 +251,11 @@
             <li class="nav-item me-3">
               <span class="nav-link p-2 text-body-secondary">Funded by BMFSFJ</span>
             </li>
-            <li class="nav-item">
+            <li class="nav-item me-3">
               <span class="nav-link p-2 text-body-secondary">2023 &ndash; 2025</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" href="https://www.ikido.info/" target="_blank" rel="noopener">ikido.info &rarr;</a>
             </li>
           </ul>
         </div>
@@ -314,6 +337,7 @@
 
               <!-- Research & Insights -->
               <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Research &amp; Insights</h2>
+              <p class="fs-lg mb-3">All experience spaces are grounded in a custom <strong>multi-level AI Literacy competency model</strong> that progresses from understanding what AI systems are and where they are used, through how they learn and what influences their reliability, to recognizing the broader potentials and risks of AI applications.</p>
               <ul class="fs-lg mb-4">
                 <li class="mb-2"><strong>Aha-Moments:</strong> Practical experiments lead to sudden realizations that stay with the students longer than theory.</li>
                 <li class="mb-2"><strong>Scenarios Matter:</strong> Using tangible examples, like autonomous driving for image recognition, makes the technology relatable to everyday life.</li>
@@ -332,11 +356,16 @@
               <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Solution</h2>
               <p class="fs-lg mb-3">The solution consists of several modules:</p>
               <ul class="fs-lg mb-0">
-                <!--li class="mb-2"><strong>AI Workbench:</strong> A tool for training and testing image recognition systems.</li-->
-                <li class="mb-2"><strong>AI Exploratorium:</strong> A physical, exhibition-like space where students solve riddles to learn AI principles.</li>
-                <li class="mb-2"><strong>Workshop Formats:</strong> 1-Day Basics (focus on components and learning processes) and 2&ndash;3 Day Deep Dives (includes deepfakes, ethics, and a design challenge).</li>
+                <li class="mb-2"><strong>Image Recognition Experience Space:</strong> Participants train their own AI models using the custom-built &ldquo;AI Workbench&rdquo; and explore real-world scenarios such as autonomous driving.</li>
+                <li class="mb-2"><strong>Generative AI Experience Space:</strong> A dedicated space focused on Large Language Models (LLMs) like ChatGPT, addressing how generative AI produces content and the risks of unreflected use.</li>
+                <li class="mb-2"><strong>Formats:</strong> Moderator-driven <strong>workshops</strong> as 1-Day Basics or 2&ndash;3 Day Deep Dives. Or as a physical, exhibition-like <strong>AI-Exploratorium</strong> where students solve riddles to learn AI principles in a self-paced manner.</li>
                 <li class="mb-2"><strong>iKIDO Tools:</strong> Dedicated online tools to build simple AI applications without any programming knowledge.</li>
               </ul>
+
+              <!-- AI Workbench screenshot -->
+              <div class="rounded-5 overflow-hidden bg-secondary mt-4" style="max-width: 800px;" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+                <img src="assets/img/eipcm/AI%20Workbench.png" alt="AI Workbench — a step-by-step tool for training image recognition models" class="d-block w-100">
+              </div>
             </div>
           </div>
         </div>
@@ -422,11 +451,12 @@
             </div>
           </div>
           <div class="col-12 pt-4">
-            <h3 class="h4 pb-2">Expected Impact</h3>
+            <h3 class="h4 pb-2">Contribution to the Common Good</h3>
             <ul class="fs-lg mb-4">
-              <li class="mb-2"><strong>Societal:</strong> Empowered youth who can critically reflect on AI usage and protect themselves against manipulation.</li>
-              <li class="mb-2"><strong>Educational:</strong> Scalable multiplier effect where trained educators reach hundreds of additional youth.</li>
-              <li class="mb-2"><strong>Economic:</strong> Improved future career prospects for young people in a growing technology sector.</li>
+              <li class="mb-2"><strong>Digital Sovereignty:</strong> Youth are empowered to participate in public debates on AI, protect themselves against deepfake manipulation, and exercise data sovereignty in digital spaces.</li>
+              <li class="mb-2"><strong>Educational Equity:</strong> All materials are freely available as OER and distributed through media competence centres, Maker Spaces, and platforms such as MINT Zukunft schaffen &mdash; ensuring access for youth from disadvantaged backgrounds.</li>
+              <li class="mb-2"><strong>Multiplier Effect:</strong> Trained educators reach hundreds of additional youth, creating a sustainable network across schools, open workshops (e.g. MINT Impuls e.V.), and non-formal learning settings.</li>
+              <li class="mb-2"><strong>Career Readiness:</strong> Building AI competencies strengthens young people&rsquo;s prospects in a growing technology sector.</li>
             </ul>
           </div>
         </div>
@@ -458,35 +488,48 @@
 
 
     <!-- Footer -->
-    <footer class="footer bg-dark position-relative py-4 py-md-5">
-      <div class="container position-relative z-2 pt-4 pt-md-2 pt-xl-4 pt-xxl-5" data-bs-theme="dark">
-        <div class="row py-md-3 mb-4 mb-md-5">
-          <div class="col-md-7 col-lg-6 col-xxl-5 mb-sm-4 mb-md-0">
-            <h2 class="display-4 mb-4 mb-md-5">Let's advance responsible AI together</h2>
-            <div class="d-sm-flex align-items-center">
-              <a class="btn btn-lg btn-primary me-sm-3 me-lg-4" href="contact.html">Get in touch</a>
-              <p class="text-body fs-sm py-3 py-sm-0 ps-sm-2 mb-0">We are always open for collaboration and new partnerships</p>
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Germany</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
             </div>
           </div>
-          <div class="col-md-5 offset-lg-1 offset-xxl-2 d-flex flex-column">
-            <div class="nav mx-n2 mx-lg-n4 mb-2 mb-sm-3">
-              <a class="nav-link text-white px-2 px-lg-4" href="mailto:eipcm@eipcm.org">eipcm@eipcm.org</a>
-              <a class="nav-link px-3 px-lg-4" href="privacy.html">Privacy policy</a>
-            </div>
-            <div class="nav flex-column mb-3 mb-sm-4">
-              <a class="nav-link py-1 px-0" href="projects.html">Projects</a>
-              <a class="nav-link py-1 px-0" href="research.html">Research</a>
-              <a class="nav-link py-1 px-0" href="publications.html">Publications</a>
-              <a class="nav-link py-1 px-0" href="training.html">Training</a>
-            </div>
-            <div class="nav mx-n2 mt-auto">
-              <a class="nav-link py-1 px-2 me-2" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener">linkedin</a>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projects.html">Projects</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="research.html">Research</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publications.html">Publications</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Legal</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="privacy.html">Privacy policy</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Contact</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:eipcm@eipcm.org">eipcm@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="contact.html">Get in touch</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <p class="nav fs-sm pt-3 pb-2 pb-lg-0 mb-0">
-          <span class="text-body-secondary">&copy; 2025 EIPCM. All rights reserved.</span>
-        </p>
       </div>
     </footer>
 
