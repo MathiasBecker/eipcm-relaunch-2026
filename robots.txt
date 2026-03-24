@@ -1,0 +1,38 @@
+# EIPCM Website - Robots Configuration
+
+# Allow all bots to crawl and index
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /vendor/
+Disallow: /*.json$
+Disallow: /*.css.map$
+Disallow: /*.js.map$
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+Request-rate: 30/60
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+Request-rate: 30/60
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0
+
+# Block bad bots
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://eipcm.org/sitemap.xml

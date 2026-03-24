@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" style="font-size: 15px;">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO meta tags -->
+    <title>EIPCM - SmartH2O — Intelligent Water Management &amp; Behavioural Change</title>
+    <meta name="description" content="SmartH2O develops intelligent technology platforms and gamification strategies for water demand management through real-time feedback, social computing, and behaviour modelling. EU FP7 project with case studies in Switzerland and Spain achieving 3.8-10% water savings.">
+    <meta name="keywords" content="EIPCM, SmartH2O, water management, water conservation, behavioural change, smart metering, gamification, water efficiency, FP7, sustainability, water consumption, user engagement, social computing">
+    <meta name="author" content="EIPCM">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="EIPCM - SmartH2O — Intelligent Water Management &amp; Behavioural Change">
+    <meta property="og:description" content="SmartH2O develops intelligent technology platforms and gamification strategies for water demand management through real-time feedback, social computing, and behaviour modelling. EU FP7 project with case studies in Switzerland and Spain achieving 3.8-10% water savings.">
+    <meta property="og:image" content="https://eipcm.org/assets/og-image-smarth2o.jpg">
+    <meta property="og:url" content="https://eipcm.org/project-smarth2o.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon / App icons -->
+    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+
+    <!-- Import Google fonts (Titillium Web for headings, Open Sans for body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/aos/dist/aos.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Custom overrides -->
+    <style>
+      /* Body font: Open Sans, Headings: Titillium Web */
+      body { font-family: "Open Sans", sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-family: "Titillium Web", sans-serif !important;
+      }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      /* Footer text color */
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      /* Footer hover color */
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      /* Content link color */
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      /* Keep buttons/inputs unselectable */
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
+    </style>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner {
+        0% { transform: scale(0); }
+        50% { opacity: 1; transform: none; }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () { preloader.remove() }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+          <a class="navbar-brand pe-sm-3" href="index.html">
+            <img src="assets/img/eipcm-logo-small.svg" alt="EIPCM" width="118" height="40">
+          </a>
+          <a class="nav-link fs-xl order-lg-2 ms-lg-4 p-2 d-none d-lg-inline-flex" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ai-linkedin"></i>
+          </a>
+          <a class="btn btn-secondary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex ms-auto ms-lg-3" href="contact.html">Contact</a>
+
+          <!-- Language switcher -->
+          <span class="order-lg-4 d-none d-sm-inline-flex align-items-center ms-3 fs-sm">
+            <strong class="text-nav">EN</strong>
+            <span class="mx-1 text-muted">|</span>
+            <a href="de/projekt-smarth2o.html" class="text-decoration-none text-muted">DE</a>
+          </span>
+
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+              <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+              <li class="nav-item"><a class="nav-link" href="training.html">Training</a></li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-secondary w-100 mb-1" href="contact.html">Contact</a>
+            </div>
+            <div class="d-sm-none text-center pb-3">
+              <strong class="text-nav">EN</strong>
+              <span class="mx-2 text-muted">|</span>
+              <a href="de/projekt-smarth2o.html" class="text-decoration-none text-muted">DE</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="position-relative pt-5 mb-5">
+        <div class="bg-secondary position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block"></div>
+        <div class="bg-secondary position-absolute top-0 end-0 w-100 h-100 d-lg-none"></div>
+        <div class="container position-relative z-2 py-5 pb-lg-0">
+
+          <nav aria-label="breadcrumb">
+            <ol class="pt-lg-2 pb-1 breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+              <li class="breadcrumb-item active" aria-current="page">SmartH2O</li>
+            </ol>
+          </nav>
+
+          <div class="d-lg-flex align-items-center pt-3 pb-xxl-5">
+            <div class="order-lg-2 me-auto me-lg-0 ms-auto rounded-5 overflow-hidden flex-shrink-0" style="width: 480px; max-width: 100%;">
+              <picture>
+                <img src="assets/img/eipcm/SmartH2O platform screenshot 2.png" alt="SmartH2O Platform Interface" class="d-block w-100">
+              </picture>
+            </div>
+            <div class="order-lg-1 text-center text-lg-start pe-lg-4 py-4 py-md-5">
+              <h1 class="display-3 pb-3 pb-lg-4">SmartH2O &mdash; Smart Water Intelligence</h1>
+              <p class="fs-lg mx-auto mx-lg-0 mb-0" style="max-width: 530px;">A comprehensive platform combining smart metering, behavioural modelling, social gaming, and intelligent recommendations to motivate sustainable residential water consumption through user engagement and community awareness.</p>
+            </div>
+          </div>
+
+          <ul class="nav justify-content-center justify-content-lg-start mx-n2 pt-lg-5 mb-0">
+            <li class="nav-item me-3">
+              <span class="nav-link p-2 text-body-secondary">Funded by EU FP7</span>
+            </li>
+            <li class="nav-item me-3">
+              <span class="nav-link p-2 text-body-secondary">2014 &ndash; 2017</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" href="https://eipcm.org/project/sh2o/" target="_blank" rel="noopener">eipcm.org/project/sh2o/ &rarr;</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- Project showcase -->
+      <section class="container pt-lg-2 pt-xl-4 pt-xxl-5">
+        <div class="row py-sm-3 py-md-4 py-lg-5">
+
+          <!-- Sticky sidebar -->
+          <aside class="col-md-3 col-lg-2" style="margin-top: -125px;">
+            <div class="d-flex d-md-block flex-wrap position-sticky top-0" style="padding-top: 130px;">
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Pilots</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Tegna (Switzerland)</li>
+                  <li class="d-block py-1">Valencia (Spain)</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Domain</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Sustainability</li>
+                  <li class="d-block py-1">Water Conservation</li>
+                  <li class="d-block py-1">Behavioural Change</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">EIPCM Role</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Research Partner</li>
+                  <li class="d-block py-1">Behavioural Change</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Duration</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">2014 &ndash; 2017</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Description -->
+          <div class="col-md-9 offset-lg-1">
+            <div class="ps-md-4 ps-lg-0">
+
+              <!-- Overview -->
+              <div class="border-bottom pb-3 pb-sm-4 pb-lg-5 mb-4">
+                <p class="text-dark lead mb-md-2 mb-lg-3 mb-xl-4">SmartH2O develops an intelligent, bidirectional platform that empowers water utilities, municipalities, and households to reduce water consumption through real-time data awareness, social engagement, gamification, and evidence-based recommendations.</p>
+              </div>
+
+              <!-- Problem & Context -->
+              <h2 class="h1 pt-2 pt-sm-3 pt-md-4 pt-lg-5 pb-2">Problem &amp; Context</h2>
+              <p class="fs-lg mb-3">Water scarcity and increasing demand challenge urban water systems globally. Despite growing awareness, residential consumption remains high because households lack effective tools to understand their water use, compare behaviour to peers, and find motivation for sustainable change.</p>
+
+              <!-- Solution & Approach -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Solution &amp; Approach</h2>
+              <p class="fs-lg mb-3">SmartH2O implements a comprehensive strategy combining smart metering, behavioural modelling, and social engagement. The platform integrates four complementary components:</p>
+
+              <!-- Real-Time Feedback & Visualisation -->
+              <h3 class="h3 pt-2 pb-1">Real-Time Feedback &amp; Visualisation</h3>
+              <p class="fs-lg mb-3">Smart meters deliver granular water consumption data directly to households through web portals and mobile apps, making invisible consumption visible and enabling informed decision-making.</p>
+
+              <!-- Peer Comparison & Social Mechanisms -->
+              <h3 class="h3 pt-2 pb-1">Peer Comparison &amp; Social Mechanisms</h3>
+              <p class="fs-lg mb-3">Households compare their consumption to peers and aggregate benchmarks, activating social norms and healthy competition to encourage conservation behaviour within communities.</p>
+
+              <!-- Gamification & Engagement -->
+              <h3 class="h3 pt-2 pb-1">Gamification &amp; Engagement</h3>
+              <p class="fs-lg mb-3">Points, badges, leaderboards, and community challenges transform water saving into engaging gameplay. The Drop! board game further motivates households and educates school children about water conservation.</p>
+
+              <!-- Intelligent Recommendations -->
+              <h3 class="h3 pt-2 pb-1">Intelligent Recommendations &amp; Pricing</h3>
+              <p class="fs-lg mb-0">Agent-based models and data analytics identify consumption anomalies and provide personalized efficiency tips. Dynamic pricing experiments explore how tariff structures can incentivize conservation during scarcity periods.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Images -->
+        <div class="row pt-3 pt-sm-4 pt-md-5 pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+          <div class="col-sm-7 mb-4 mb-sm-0">
+            <div class="rounded-5 overflow-hidden bg-secondary" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+              <picture>
+                <img src="assets/img/eipcm/smartH2O Overview.PNG" alt="SmartH2O Platform Overview" class="d-block w-100 h-100" style="object-fit: cover;">
+              </picture>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="rounded-5 overflow-hidden bg-secondary h-100" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200" data-aos-delay="150">
+              <picture>
+                <img src="assets/img/eipcm/SmartH2O EUSEW.jpeg" alt="SmartH2O EUSEW" class="d-block w-100 h-100" style="object-fit: cover;">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Demo -->
+        <div class="row pt-3 pt-sm-4 pt-md-5 pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8">
+            <h2 class="h1 pb-sm-2 pb-lg-3">Platform Demo</h2>
+            <div class="position-relative" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+              <iframe width="100%" height="400" src="https://www.youtube.com/embed/YLrTW9MVUjk" title="SmartH2O System Overview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="fs-lg mt-3">Watch the SmartH2O system overview demonstrating the platform's core features and functionality for water consumption monitoring and behavioural change engagement.</p>
+          </div>
+        </div>
+
+        <!-- Pilot Implementation & Testing -->
+        <div class="row pt-sm-3 pt-md-4 pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+          <div class="col-md-7 col-xl-6 mb-4 mb-md-0">
+            <h2 class="h1 pb-2">Pilot Implementation &amp; Testing</h2>
+            <p class="fs-lg mb-0">SmartH2O was rigorously tested in two European water utilities with diverse contexts. The Tegna (Switzerland) pilot focused on smaller-scale deployment, while Valencia (Spain) leveraged 420,000 existing smart meters for large-scale validation. Combined, these sites involved over 550 active users and provided evidence of behavioural change effectiveness.</p>
+          </div>
+          <div class="col-md-5 offset-xl-1">
+            <div class="row row-cols-2 gx-3 gx-sm-4">
+              <div class="col">
+                <div class="h2 display-2 mb-1">550+</div>
+                <p class="fs-sm mb-0">Active users in pilots</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">2</div>
+                <p class="fs-sm mb-0">European case studies</p>
+              </div>
+            </div>
+            <div class="row row-cols-2 gx-3 gx-sm-4 mt-4">
+              <div class="col">
+                <div class="h2 display-2 mb-1">21.7%</div>
+                <p class="fs-sm mb-0">Savings vs. control group (Spain)</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">24.5%</div>
+                <p class="fs-sm mb-0">Peak-period consumption reduction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EIPCM's Role & Status -->
+        <div class="row pt-1 pt-sm-3 pt-md-4 pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8">
+            <h2 class="h1 pb-sm-2 pb-lg-3">EIPCM&rsquo;s Role</h2>
+            <p class="fs-lg mb-3">EIPCM contributed to SmartH2O as a research partner, bringing expertise in behavioural change and user engagement. The institute contributed to requirements analysis, platform design, and the validation of behavioural interventions across both pilot sites.</p>
+            <p class="fs-lg mb-0">EIPCM&rsquo;s research focus was on understanding which combination of feedback mechanisms, peer comparison strategies, and gamification elements most effectively motivate water conservation behaviour. This work informed the design of engagement features and contributed to establishing best practices for deploying intelligent water management systems in diverse cultural and technical contexts.</p>
+          </div>
+        </div>
+
+
+        <!-- Consortium -->
+        <div class="row pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8">
+            <h2 class="h1 pb-sm-2 pb-lg-3">Consortium</h2>
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="h6 text-body-secondary mb-2">Research Partners</h3>
+                <ul class="fs-lg mb-4">
+                  <li>Istituto Dalle Molle di Studi sull&rsquo;Intelligenza Artificiale, SUPSI (Coordinator)</li>
+                  <li>Politecnico di Milano (Italy)</li>
+                  <li>Universitat Polit&egrave;cnica de Val&egrave;ncia (Spain)</li>
+                  <li>University of Manchester (UK)</li>
+                  <li>EIPCM (Germany)</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h3 class="h6 text-body-secondary mb-2">Water Utilities &amp; Industry Partners</h3>
+                <ul class="fs-lg mb-0">
+                  <li>SES Controlli (Switzerland)</li>
+                  <li>EMIVASA (Spain)</li>
+                  <li>Thames Water Utilities (UK)</li>
+                  <li>HS Stralsund (Germany)</li>
+                  <li>Set Mobile, Moonsubmarine &amp; others</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Back to projects -->
+      <section class="container pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+        <div class="border-top pt-4 pt-sm-5">
+          <a class="btn btn-lg btn-outline-primary" href="projects.html">
+            <i class="ai-arrow-left me-2"></i>
+            Back to all projects
+          </a>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Germany</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projects.html">Projects</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="research.html">Research</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publications.html">Publications</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Legal</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="privacy.html">Privacy policy</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Contact</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:eipcm@eipcm.org">eipcm@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="contact.html">Get in touch</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+    <script src="assets/vendor/aos/dist/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/theme.min.js"></script>
+    <script src="assets/js/cookie-consent.js"></script>
+  </body>
+</html>

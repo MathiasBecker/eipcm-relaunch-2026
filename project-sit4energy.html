@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" style="font-size: 15px;">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+    <!-- SEO meta tags -->
+    <title>SIT4Energy: Smart Energy Management for Prosumers | EIPCM</title>
+    <meta name="description" content="SIT4Energy: Intelligent energy management platform combining explainable AI, visual analytics & behavioral science. Optimize prosumer self-sufficiency and energy efficiency.">
+    <meta name="keywords" content="EIPCM, SIT4Energy, energy management, prosumers, renewable energy, smart metering, behavioral change, energy efficiency, forecasting, visual analytics, explainable AI, Germany, Greece">
+    <meta name="author" content="EIPCM">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="SIT4Energy: Smart Energy Management for Prosumers | EIPCM">
+    <meta property="og:description" content="SIT4Energy: Intelligent energy management platform combining explainable AI, visual analytics & behavioral science. Optimize prosumer self-sufficiency and energy efficiency.">
+    <meta property="og:image" content="https://eipcm.org/assets/og-image-sit4energy.jpg">
+    <meta property="og:url" content="https://eipcm.org/project-sit4energy.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="article:published_time" content="2021-05-31T00:00:00Z">
+    <meta property="article:author" content="EIPCM">
+    <meta property="article:section" content="Research">
+    <link rel="alternate" hreflang="de" href="https://eipcm.org/de/projekt-sit4energy.html">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SIT4Energy: Smart Energy Management for Prosumers",
+      "description": "SIT4Energy intelligent energy management platform combining explainable AI and behavioral science",
+      "image": "https://eipcm.org/assets/og-image-sit4energy.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "EIPCM",
+        "url": "https://eipcm.org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "EIPCM",
+        "url": "https://eipcm.org"
+      },
+      "datePublished": "2021-05-31T00:00:00Z",
+      "inLanguage": "en"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://eipcm.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://eipcm.org/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SIT4Energy",
+          "item": "https://eipcm.org/project-sit4energy.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon / App icons -->
+    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+
+    <!-- Import Google fonts (Titillium Web for headings, Open Sans for body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Titillium+Web:wght@400;600;700;900&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/aos/dist/aos.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Custom overrides -->
+    <style>
+      /* Body font: Open Sans, Headings: Titillium Web */
+      body { font-family: "Open Sans", sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-family: "Titillium Web", sans-serif !important;
+      }
+      /* Allow text selection everywhere */
+      body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+        -webkit-user-select: text !important;
+        user-select: text !important;
+      }
+      /* Footer text color */
+      .footer, .footer p, .footer h4, .footer a.nav-link, .footer span, .footer li {
+        color: #E5E5E5 !important;
+      }
+      /* Footer hover color */
+      .footer a.nav-link:hover,
+      .footer a.navbar-brand:hover,
+      .footer .btn:hover {
+        color: #90BB0A !important;
+      }
+      /* Content link color */
+      a:not(.btn):not(.nav-link):not(.navbar-brand) {
+        color: #478018 !important;
+      }
+      /* Keep buttons/inputs unselectable */
+      button, .btn, input, select, textarea {
+        -webkit-user-select: none !important;
+        user-select: none !important;
+      }
+    </style>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @keyframes spinner {
+        0% { transform: scale(0); }
+        50% { opacity: 1; transform: none; }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () { preloader.remove() }, 1500)
+        }
+      })()
+    </script>
+  </head>
+
+
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+          <a class="navbar-brand pe-sm-3" href="index.html">
+            <img src="assets/img/eipcm-logo-small.svg" alt="EIPCM" width="118" height="40">
+          </a>
+          <a class="nav-link fs-xl order-lg-2 ms-lg-4 p-2 d-none d-lg-inline-flex" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="ai-linkedin"></i>
+          </a>
+          <a class="btn btn-secondary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex ms-auto ms-lg-3" href="contact.html">Contact</a>
+
+          <!-- Language switcher -->
+          <span class="order-lg-4 d-none d-sm-inline-flex align-items-center ms-3 fs-sm">
+            <strong class="text-nav">EN</strong>
+            <span class="mx-1 text-muted">|</span>
+            <a href="de/projekt-sit4energy.html" class="text-decoration-none text-muted">DE</a>
+          </span>
+
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+              <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+              <li class="nav-item"><a class="nav-link" href="training.html">Training</a></li>
+            </ul>
+            <div class="d-sm-none p-3 mt-n3">
+              <a class="btn btn-secondary w-100 mb-1" href="contact.html">Contact</a>
+            </div>
+            <div class="d-sm-none text-center pb-3">
+              <strong class="text-nav">EN</strong>
+              <span class="mx-2 text-muted">|</span>
+              <a href="de/projekt-sit4energy.html" class="text-decoration-none text-muted">DE</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="position-relative pt-5 mb-5">
+        <div class="bg-secondary position-absolute top-0 end-0 w-50 h-100 d-none d-lg-block"></div>
+        <div class="bg-secondary position-absolute top-0 end-0 w-100 h-100 d-lg-none"></div>
+        <div class="container position-relative z-2 py-5 pb-lg-0">
+
+          <nav aria-label="breadcrumb">
+            <ol class="pt-lg-2 pb-1 breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+              <li class="breadcrumb-item active" aria-current="page">SIT4Energy</li>
+            </ol>
+          </nav>
+
+          <div class="d-lg-flex align-items-center pt-3 pb-xxl-5">
+            <div class="order-lg-2 me-auto me-lg-0 ms-auto rounded-5 overflow-hidden flex-shrink-0" style="width: 480px; max-width: 100%;">
+              <picture>
+                <img src="assets/img/eipcm/SI4Energy prosumer dashboard with energy production+consumption and self-sufficiency.PNG" alt="SIT4Energy Prosumer Dashboard - Energy Production, Consumption & Self-Sufficiency" class="d-block w-100">
+              </picture>
+            </div>
+            <div class="order-lg-1 text-center text-lg-start pe-lg-4 py-4 py-md-5">
+              <h1 class="display-3 pb-3 pb-lg-4">SIT4Energy &mdash; Smart Energy Intelligence</h1>
+              <p class="fs-lg mx-auto mx-lg-0 mb-0" style="max-width: 530px;">An intelligent energy management platform combining explainable AI, visual analytics, and behavioral science to empower prosumers in optimizing self-sufficiency, reducing consumption, and maximizing renewable energy utilization.</p>
+            </div>
+          </div>
+
+          <ul class="nav justify-content-center justify-content-lg-start mx-n2 pt-lg-5 mb-0">
+            <li class="nav-item me-3">
+              <span class="nav-link p-2 text-body-secondary">Funded by BMBF & GSRT</span>
+            </li>
+            <li class="nav-item me-3">
+              <span class="nav-link p-2 text-body-secondary">2018 &ndash; 2021</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" href="https://sit4energy.eu/" target="_blank" rel="noopener">sit4energy.eu &rarr;</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- Project showcase -->
+      <section class="container pt-lg-2 pt-xl-4 pt-xxl-5">
+        <div class="row py-sm-3 py-md-4 py-lg-5">
+
+          <!-- Sticky sidebar -->
+          <aside class="col-md-3 col-lg-2" style="margin-top: -125px;">
+            <div class="d-flex d-md-block flex-wrap position-sticky top-0" style="padding-top: 130px;">
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Partners</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Hochschule Stralsund (Coordinator)</li>
+                  <li class="d-block py-1">Stadtwerk Haßfurt</li>
+                  <li class="d-block py-1">CERTH/ITI</li>
+                  <li class="d-block py-1">ITML</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Domain</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Energy Efficiency</li>
+                  <li class="d-block py-1">Smart Prosumers</li>
+                  <li class="d-block py-1">Behavioral Science</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4 me-5 me-md-0">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">EIPCM Role</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">Research Partner</li>
+                  <li class="d-block py-1">Behavioral Change</li>
+                </ul>
+              </div>
+              <div class="pb-3 mb-2 mb-lg-4">
+                <h2 class="fs-base fw-normal text-body-secondary mb-2">Duration</h2>
+                <ul class="list-unstyled fs-lg fw-semibold text-dark mb-0">
+                  <li class="d-block py-1">2018 &ndash; 2021</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Description -->
+          <div class="col-md-9 offset-lg-1">
+            <div class="ps-md-4 ps-lg-0">
+
+              <!-- Overview -->
+              <div class="border-bottom pb-3 pb-sm-4 pb-lg-5 mb-4">
+                <p class="text-dark lead mb-md-2 mb-lg-3 mb-xl-4">SIT4Energy develops intelligent, user-centered platforms that empower prosumers to optimize renewable energy self-consumption and utilities to forecast demand with explainable AI. The project integrates smart metering infrastructure, behavioral analytics, and adaptive incentivization to drive sustainable energy practices across residential and tertiary buildings.</p>
+              </div>
+
+              <!-- Problem & Context -->
+              <h2 class="h1 pt-2 pt-sm-3 pt-md-4 pt-lg-5 pb-2">Problem &amp; Context</h2>
+              <p class="fs-lg mb-3">Traditional energy management focuses on supply-side solutions without considering prosumers who generate and consume their own renewable energy. Existing prosumer applications lack integration with local utilities, preventing optimization of grid demand. Consumers struggle with understanding consumption patterns, lack motivation for behavioral change, and utilities lack forecast tools tailored to small-scale operations.</p>
+
+              <!-- Solution & Approach -->
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">Solution &amp; Approach</h2>
+              <p class="fs-lg mb-3">SIT4Energy implements a comprehensive three-pillar strategy combining technology innovation, business model development, and consumer empowerment through explainable AI and <a href="research.html">visual analytics</a>.</p>
+
+              <!-- Prosumer Dashboard -->
+              <h3 class="h3 pt-2 pb-1">Prosumer Dashboard &amp; Analytics</h3>
+              <p class="fs-lg mb-3">Real-time energy production and consumption visualization with self-sufficiency calculations and personalized recommendations. Interactive dashboards display hourly energy flows, cost savings, and comparative analysis enabling informed decision-making and behavioral change.</p>
+
+              <!-- Utility Forecasting -->
+              <h3 class="h3 pt-2 pb-1">Utility Forecasting &amp; Decision Support</h3>
+              <p class="fs-lg mb-3">Explainable k-NN algorithm for demand forecasting integrating weather parameters and historical patterns. Municipal utilities gain interpretable forecasts with 5% MAPE accuracy, supporting energy planning without requiring complex machine learning expertise.</p>
+
+              <!-- Adaptive Incentivization -->
+              <h3 class="h3 pt-2 pb-1">Adaptive Incentivization &amp; Behavioral Change</h3>
+              <p class="fs-lg mb-3">Personalized motivation strategies based on user value orientations (egoistic, altruistic, biospheric) and behavioral stages (pre-contemplation, contemplation, action). Context-aware notifications and recommendations trigger sustainable energy behaviors at decision-critical moments.</p>
+
+              <!-- Mobile Integration -->
+              <h3 class="h3 pt-2 pb-1">Mobile Services &amp; Context-Aware Recommendations</h3>
+              <p class="fs-lg mb-0">Mobile app integration delivering consumption insights and AI-generated recommendations optimized for micro-moments of decision-making. Services adapt to weather conditions, device availability, and user engagement patterns for maximum effectiveness.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Images -->
+        <div class="row pt-3 pt-sm-4 pt-md-5 pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+          <div class="col-sm-7 mb-4 mb-sm-0">
+            <div class="rounded-5 overflow-hidden bg-secondary" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+              <picture>
+                <img src="assets/img/eipcm/SIT4Energy Smart Energy Management Dashboard. Forecast energy demand of the input parameters corresponding to the 03-03-2020 and k equals 5.PNG" alt="SIT4Energy Smart Energy Management Dashboard - Forecasting" class="d-block w-100 h-100" style="object-fit: cover;">
+              </picture>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="rounded-5 overflow-hidden bg-secondary h-100" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200" data-aos-delay="150">
+              <picture>
+                <img src="assets/img/eipcm/SI4Energy prosumer dashboard context-aware recommendations.PNG" alt="SIT4Energy Prosumer Dashboard - Context-Aware Recommendations" class="d-block w-100 h-100" style="object-fit: cover;">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilot Implementation & Testing -->
+        <div class="row pt-sm-3 pt-md-4 pb-5 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5">
+          <div class="col-md-7 col-xl-6 mb-4 mb-md-0">
+            <h2 class="h1 pb-2">Pilot Implementation &amp; Testing</h2>
+            <p class="fs-lg mb-0">SIT4Energy was validated in three pilot locations: residential prosumers in Haßfurt (Germany) with 22 participants and their solar installations, a smart home laboratory at CERTH/ITI (Greece), and tertiary building testing at Harokopio University (Athens). The 8-month open phase pilot (July 2020 - May 2021) provided real-world evidence of behavioral change and platform effectiveness across diverse user contexts.</p>
+          </div>
+          <div class="col-md-5 offset-xl-1">
+            <div class="row row-cols-2 gx-3 gx-sm-4">
+              <div class="col">
+                <div class="h2 display-2 mb-1">+5%</div>
+                <p class="fs-sm mb-0">Self-sufficiency improvement</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">3</div>
+                <p class="fs-sm mb-0">Pilot locations (DE, GR)</p>
+              </div>
+            </div>
+            <div class="row row-cols-2 gx-3 gx-sm-4 mt-4">
+              <div class="col">
+                <div class="h2 display-2 mb-1">94.94%</div>
+                <p class="fs-sm mb-0">Forecast accuracy (5.06% error)</p>
+              </div>
+              <div class="col">
+                <div class="h2 display-2 mb-1">82%</div>
+                <p class="fs-sm mb-0">Usefulness rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EIPCM's Role & Status -->
+        <div class="row pt-1 pt-sm-3 pt-md-4 pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8">
+            <h2 class="h1 pb-sm-2 pb-lg-3">EIPCM&rsquo;s Role</h2>
+            <p class="fs-lg mb-0">EIPCM led the design and implementation of the Prosumer Dashboard with real-time energy visualizations, self-sufficiency calculations, and interactive analytics. The institute conceived a context-aware reminder service with adaptive incentivization that delivers personalized energy-saving recommendations at optimal moments based on <a href="research.html">behavioral insights</a> and user patterns. EIPCM&rsquo;s research focused on understanding how visual feedback, context-aware timing, and adaptive incentives most effectively motivate <a href="research.html">behavioral change</a> while preserving user autonomy and trust.</p>
+          </div>
+        </div>
+
+
+        <!-- Consortium -->
+        <div class="row pb-5 mb-md-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+          <div class="col-md-11 col-lg-9 col-xl-8">
+            <h2 class="h1 pb-sm-2 pb-lg-3">Consortium</h2>
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="h6 text-body-secondary mb-2">German Partners</h3>
+                <ul class="fs-lg mb-4">
+                  <li>Hochschule Stralsund (Coordinator)</li>
+                  <li>Stadtwerk Haßfurt (Municipal Utility)</li>
+                  <li>EIPCM (Subcontracted Research Partner)</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h3 class="h6 text-body-secondary mb-2">Greek Partners</h3>
+                <ul class="fs-lg mb-0">
+                  <li>CERTH &ndash; Information Technologies Institute</li>
+                  <li>Information Technology for Market Leadership (ITML)</li>
+                  <li>Harokopio University (Tertiary Building Pilot)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Back to projects -->
+      <section class="container pb-5 mb-2 mb-lg-3 mb-xl-4 mb-xxl-5">
+        <div class="border-top pt-4 pt-sm-5">
+          <a class="btn btn-lg btn-outline-primary" href="projects.html">
+            <i class="ai-arrow-left me-2"></i>
+            Back to all projects
+          </a>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5" data-bs-theme="dark">
+      <div class="container pt-md-2 pt-lg-3 pt-xl-4">
+        <div class="row pb-5 pt-sm-2 mb-lg-2">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-4 mb-md-0">
+            <a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html">
+              <img src="assets/img/eipcm-logo-small-light.svg" alt="EIPCM" width="118" height="40">
+            </a>
+            <p class="text-body fs-sm pb-2 pb-md-3 mb-3">European Institute for Participatory Media e.V.<br>Pariser Platz 6<br>10117 Berlin, Germany</p>
+            <div class="d-flex gap-3">
+              <a class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle" href="https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="ai-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-6 offset-lg-2 offset-xl-3">
+            <div class="row row-cols-1 row-cols-sm-3">
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Navigation</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="projects.html">Projects</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="research.html">Research</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="publications.html">Publications</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="training.html">Training</a></li>
+                </ul>
+              </div>
+              <div class="col mb-4 mb-md-0">
+                <h4 class="h6 fw-bold pb-lg-1">Legal</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="impressum.html">Impressum</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="privacy.html">Privacy policy</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h4 class="h6 fw-bold pb-lg-1">Contact</h4>
+                <ul class="nav flex-column">
+                  <li><a class="nav-link fw-normal py-1 px-0" href="mailto:eipcm@eipcm.org">eipcm@eipcm.org</a></li>
+                  <li><a class="nav-link fw-normal py-1 px-0" href="contact.html">Get in touch</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+    <script src="assets/vendor/aos/dist/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/theme.min.js"></script>
+    <script src="assets/js/cookie-consent.js"></script>
+  </body>
+</html>
