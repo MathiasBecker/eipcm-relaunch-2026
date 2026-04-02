@@ -18,6 +18,9 @@
     <meta property="og:image" content="https://eipcm.org/assets/og-image-home.jpg">
     <meta property="og:url" content="https://eipcm.org/">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://eipcm.org/index.html">
+    <link rel="alternate" hreflang="en" href="https://eipcm.org/index.html">
+    <link rel="alternate" hreflang="de" href="https://eipcm.org/de/index.html">
 
     <!-- Favicon / App icons -->
     <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
@@ -151,6 +154,30 @@
         }
       })()
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ResearchOrganization",
+      "name": "European Institute for Participatory Media (EIPCM)",
+      "alternateName": "EIPCM",
+      "url": "https://eipcm.org",
+      "logo": "https://eipcm.org/assets/img/eipcm-logo-small.svg",
+      "description": "Non-profit research organization advancing participatory systems, human-centered AI, and behavioral change through EU-funded research projects.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pariser Platz 6",
+        "addressLocality": "Berlin",
+        "postalCode": "10117",
+        "addressCountry": "DE"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/eipcm-european-institute-for-participatory-media/"
+      ],
+      "foundingDate": "2012",
+      "knowsAbout": ["Participatory Systems", "Human-Centered AI", "Behavioral Change", "Persuasive Systems Design", "AI Literacy", "Sustainability"]
+    }
+    </script>
   </head>
 
 
@@ -238,7 +265,7 @@
 
             <!-- Hero image (right side, shown first on mobile) -->
             <div class="col-lg-5 col-xl-6 order-first order-lg-last mb-4 mb-lg-0 position-relative hero-image-col" style="min-height: 350px; margin-right: calc(-50vw + 50%); padding: 35px 5px;">
-              <img src="assets/img/collab.png" alt="Team collaborating around a map" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: .5rem 0 0 .5rem;">
+              <img src="assets/img/eipcm/eipcm-workshop-cropped.jpg" alt="EIPCM workshop" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: .5rem 0 0 .5rem;">
             </div>
 
             <!-- Text + CTA button (left side) -->
@@ -323,7 +350,7 @@
                   <div class="rounded-5 overflow-hidden">
                     <picture>
                       <source srcset="assets/img/eipcm/ai-code.webp" type="image/webp">
-                      <img class="d-block w-100" src="assets/img/eipcm/ai-code.png" alt="AI-CODE" style="width: 100%; height: auto;">
+                      <img loading="lazy" class="d-block w-100" src="assets/img/eipcm/ai-code.png" alt="AI-CODE" style="width: 100%; height: auto;">
                     </picture>
                   </div>
                 </div>
@@ -344,7 +371,7 @@
                   <div class="rounded-5 overflow-hidden">
                     <picture>
                       <source srcset="assets/img/eipcm/ikido.webp" type="image/webp">
-                      <img class="d-block w-100" src="assets/img/eipcm/ikido.png" alt="iKIDO" style="width: 100%; height: auto;">
+                      <img loading="lazy" class="d-block w-100" src="assets/img/eipcm/ikido.png" alt="iKIDO" style="width: 100%; height: auto;">
                     </picture>
                   </div>
                 </div>
@@ -382,7 +409,7 @@
           <div class="col-lg-6">
             <picture>
               <source srcset="assets/img/eipcm/about-image.webp" type="image/webp">
-              <img class="d-block w-100 h-100" src="assets/img/eipcm/about-image.jpg" alt="EIPCM" style="object-fit: cover; min-height: 300px;">
+              <img loading="lazy" class="d-block w-100 h-100" src="assets/img/eipcm/about-image.jpg" alt="EIPCM" style="object-fit: cover; min-height: 300px;">
             </picture>
           </div>
           <!-- Text column (right on lg+, full width below on smaller) -->
@@ -426,19 +453,19 @@
           }
         }'>
           <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/ethz.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="ETH Zürich"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/polimi.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Politecnico di Milano"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/fraunhofer.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Fraunhofer"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/tudelft.png" style="max-height: 56px; width: auto; max-width: 160px; transform: scale(1.4);" alt="TU Delft"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/manchester.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="University of Manchester"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/ntnu.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="NTNU"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/charite.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Charité Berlin"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/uva.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Universiteit van Amsterdam"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/tu_dortmund.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="TU Dortmund"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/radboud.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Radboud University"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/tue.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="TU Eindhoven"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/utrecht.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Utrecht University"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/certh.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="CERTH"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/ethz.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="ETH Zürich"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/polimi.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Politecnico di Milano"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/fraunhofer.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Fraunhofer"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/tudelft.png" style="max-height: 56px; width: auto; max-width: 160px; transform: scale(1.4);" alt="TU Delft"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/manchester.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="University of Manchester"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/ntnu.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="NTNU"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/charite.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Charité Berlin"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/uva.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Universiteit van Amsterdam"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/tu_dortmund.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="TU Dortmund"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/radboud.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Radboud University"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/tue.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="TU Eindhoven"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/utrecht.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Utrecht University"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/certh.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="CERTH"></div></div>
           </div>
         </div>
         <div class="swiper" dir="rtl" data-swiper-options='{
@@ -464,19 +491,19 @@
           }
         }'>
           <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/upm.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="UPM Madrid"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/upv.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="UPV Valencia"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/supsi_idsia.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="SUPSI IDSIA"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/fbk.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Fondazione Bruno Kessler"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/ceps.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="CEPS"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/dw.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Deutsche Welle"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/euractiv.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Euractiv"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/nabu.png" style="max-height: 70px; width: auto; max-width: 160px; transform: scale(1.4);" alt="NABU"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/zoovu.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Zoovu"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/aguas_de_valencia.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Aguas de Valencia"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/klimabuendnis.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Klimabündnis"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/leicester.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Leicester"></div></div>
-            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img class="d-block mx-auto" src="logos/monochrome-dark/debunk_eu.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Debunk.eu"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/upm.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="UPM Madrid"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/upv.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="UPV Valencia"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/supsi_idsia.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="SUPSI IDSIA"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/fbk.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Fondazione Bruno Kessler"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/ceps.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="CEPS"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/dw.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Deutsche Welle"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/euractiv.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Euractiv"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/nabu.png" style="max-height: 70px; width: auto; max-width: 160px; transform: scale(1.4);" alt="NABU"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/zoovu.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Zoovu"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/aguas_de_valencia.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Aguas de Valencia"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/klimabuendnis.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Klimabündnis"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/leicester.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Leicester"></div></div>
+            <div class="swiper-slide"><div class="bg-gray rounded-4 d-flex align-items-center" style="height: 80px; padding: 12px 16px;"><img loading="lazy" class="d-block mx-auto" src="logos/monochrome-dark/debunk_eu.png" style="max-height: 56px; width: auto; max-width: 160px;" alt="Debunk.eu"></div></div>
           </div>
         </div>
       </section>

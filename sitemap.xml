@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://eipcm.org/index.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,35 +13,35 @@
   <!-- Main Pages -->
   <url>
     <loc>https://eipcm.org/projects.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/research.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/publications.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/training.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/contact.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -49,51 +49,79 @@
   <!-- Project Pages -->
   <url>
     <loc>https://eipcm.org/project-ai-code.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/project-ikido.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://eipcm.org/project-pademos.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <loc>https://eipcm.org/project-sit4energy.html</loc>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/project-encompass.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://eipcm.org/project-reflective-ai.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <loc>https://eipcm.org/project-chest.html</loc>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eipcm.org/project-kolegea.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://eipcm.org/project-acoda.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/project-smarth2o.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/project-xai4covid.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eipcm.org/project-reflective-ai.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eipcm.org/project-pademos.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Legal Pages -->
@@ -114,7 +142,7 @@
   <!-- German Homepage -->
   <url>
     <loc>https://eipcm.org/de/index.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -122,35 +150,35 @@
   <!-- German Main Pages -->
   <url>
     <loc>https://eipcm.org/de/projekte.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/de/forschung.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/de/publikationen.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://eipcm.org/de/schulung.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <loc>https://eipcm.org/de/training.html</loc>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/de/kontakt.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -158,51 +186,72 @@
   <!-- German Project Pages -->
   <url>
     <loc>https://eipcm.org/de/projekt-ai-code.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/de/projekt-ikido.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://eipcm.org/de/projekt-pademos.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <loc>https://eipcm.org/de/projekt-sit4energy.html</loc>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/de/projekt-encompass.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://eipcm.org/de/projekt-reflective-ai.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <loc>https://eipcm.org/de/projekt-chest.html</loc>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eipcm.org/de/projekt-kolegea.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/de/projekt-smarth2o.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://eipcm.org/de/projekt-xai4covid.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eipcm.org/de/projekt-reflective-ai.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eipcm.org/de/projekt-pademos.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- German Legal Pages -->
